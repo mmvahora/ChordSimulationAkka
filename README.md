@@ -1,5 +1,5 @@
  Course Project
-### Description: you will create and evaluate simulations of a large cloud provider with many datacenters that use different network topologies and load balancing algorithms.
+### Description: you will create and evaluate the overlay algorithms with convergent hashing using your own Akka/HTTP-based simulator.
 ### Grade: 25%.
 #### You can obtain this Git repo using the command ```git clone git@bitbucket.org:cs441_fall2019/courseproject.git```. You need to fork this repo, as explained below and you cannot push your code into this repo, otherwise, your grade for this course project will be ZERO!
 
