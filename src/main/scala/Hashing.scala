@@ -1,10 +1,6 @@
 import java.security.MessageDigest
 import java.lang.Long
 
-/**
- * @author SRINIVAS
- */
-
 object Hashing {
 
   var HASH_TYPE = "SHA-1"
