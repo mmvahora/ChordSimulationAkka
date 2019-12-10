@@ -12,7 +12,8 @@ import akka.pattern.ask
 import akka.stream.ActorMaterializer
 import akka.stream.scaladsl.FileIO
 import akka.util.Timeout
-import com.typesafe.config.ConfigFactory
+import com.typesafe.config.
+import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import spray.json.{DefaultJsonProtocol, _}
 
@@ -50,7 +51,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
   private var users = new ListBuffer[ActorRef]()
   private var computers = new ListBuffer[ActorRef]()
   private val logging = LoggerFactory.getLogger("Service")
-  private var isPaused = false
+  private var isPaused = falses
   private val stats = new mutable.HashMap[String, Int]()
   final val READ: Byte = 0
   final val WRITE: Byte = 0
