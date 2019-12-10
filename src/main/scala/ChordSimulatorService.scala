@@ -12,8 +12,7 @@ import akka.pattern.ask
 import akka.stream.ActorMaterializer
 import akka.stream.scaladsl.FileIO
 import akka.util.Timeout
-import com.typesafe.config.
-import org.slf4j.Logger
+import com.typesafe.config.ConfigFactory
 import org.slf4j.LoggerFactory
 import spray.json.{DefaultJsonProtocol, _}
 
@@ -51,7 +50,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
   private var users = new ListBuffer[ActorRef]()
   private var computers = new ListBuffer[ActorRef]()
   private val logging = LoggerFactory.getLogger("Service")
-  private var isPaused = falses
+  private var isPaused = false
   private val stats = new mutable.HashMap[String, Int]()
   final val READ: Byte = 0
   final val WRITE: Byte = 0
@@ -121,11 +120,13 @@ object ChordSimulatorService extends Directives with JsonSupport {
 
                 // build nodes after first
                 for (thisNodeID <- 2 to job.numComputers) {
+                  logging.info("Starting computer "+thisNodeID)
                   buildComputerActor(thisNodeID, job, chordSystem, firstNodeHash)
                 }
 
                 // build users
                 for (thisUserID <- 1 to job.numUsers) {
+                  logging.info("Starting users "+thisUserID)
                   buildUserActor(thisUserID, job, chordSystem)
                 }
 
@@ -290,17 +291,17 @@ object ChordSimulatorService extends Directives with JsonSupport {
   }
 
   private def buildComputerActor(computerNodeID: String, job: Job, actor: ActorSystem, firstNodeHash: Int): Unit = {
-    val hashName = Hashing.getHash("c-" + computerNodeID, Utilities.getChordSize(job.fingerSize))
+    val hashName = Hashing.getHash("c-" + computerNodeID, Utilities.getChordSize(job.fingerSize)).toString
     val props = Props(classOf[ChordNode], hashName, "c-" + computerNodeID, 10) // 10 hmmm... where is this used @todo
-    val computerActor = actor.actorOf(props, hashName.toString)
+    val computerActor = actor.actorOf(props, hashName)
     computers += computerActor
     computerActor ! Messages.join(firstNodeHash)
   }
 
   private def buildUserActor(userNodeID: Int, job: Job, actor: ActorSystem): Unit = {
-    val hashName = Hashing.getHash("u-" + userNodeID, Utilities.getChordSize(job.fingerSize))
-    val props = Props(classOf[actorUser], "u-" + userNodeID)
-    val userActor = actor.actorOf(props, hashName.toString)
+    val hashName = Hashing.getHash("u-" + userNodeID, Utilities.getChordSize(job.fingerSize)).toString
+    val props = Props(classOf[actorUser], hashName)
+    val userActor = actor.actorOf(props, hashName)
     users += userActor
   }
 }
