@@ -18,9 +18,7 @@ object Utilities {
   val myLogger: Logger = LoggerFactory.getLogger(this.getClass)
 
   def mkHash(title: String, hashSize: Int): Int = {
-
     myLogger.info("Before Hashing: " + title)
-
     if (title.length() > 0)
     {
       val hashed = MessageDigest.getInstance(MsgDgstAlgo).digest(title.getBytes)
@@ -40,6 +38,13 @@ object Utilities {
     else
     {
       0
+    }
+  }
+
+  def buffer() : Unit = {
+    var bufferPeriod: Int = (0.005 * Simulator.numberOfNodes * Simulator.numberOfRequests).toInt
+    while ((Simulator.count < (Simulator.numberOfNodes * Simulator.numberOfRequests) - bufferPeriod)) {
+      Thread.sleep(1000)
     }
   }
   /**

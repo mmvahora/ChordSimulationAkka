@@ -1,6 +1,14 @@
+import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicBoolean
+
 import akka.actor.{ActorRef, ActorSystem, Props}
+import com.typesafe.config.ConfigFactory
 import org.slf4j.{Logger, LoggerFactory}
+
+import scala.collection.convert.decorateAsScala._
+import scala.collection._
+import scala.collection.concurrent
+import scala.collection.concurrent.TrieMap
 
 object Simulator {
 
@@ -19,13 +27,27 @@ object Simulator {
   var nodesInChord: Int = 0;
   var flag: AtomicBoolean = new AtomicBoolean(true)
 
+  //loading movies data set
+  var keyToNode = new TrieMap[Int, Int]()
+  var count = 0
+  var inspec: AtomicBoolean = new AtomicBoolean(true)
+  var TotalHops = 0;
+  var movies_count = 0
+  val loader = Thread.currentThread.getContextClassLoader
+  val is = loader.getResourceAsStream("movies.csv")
+  val initialStocks = scala.io.Source.fromInputStream(is).mkString
+  val movies_list = initialStocks.split("\n").drop(0).toList
+
+ // var keyToMovies: concurrent.Map[Int, String] = new ConcurrentHashMap().asScala
+ var keyToMovies = new TrieMap[Int, String]()
+
+  //number of nodes to be placed in the chord ring
+  val numberOfNodes = 5
+
+  //number of request to process
+  val numberOfRequests = 3
+
   def main(args: Array[String]): Unit = {
-
-    //number of nodes to be placed in the chord ring
-    val numberOfNodes = 10
-
-    //number of request to process
-    val numberOfRequests = 5
 
     //actor system
     val system = ActorSystem("system")
@@ -67,6 +89,27 @@ object Simulator {
       node ! printTable()
       Thread.sleep(10)
     }
+    Thread.sleep(100)
+
+    //insertion of keys to node
+    for (i <- 1 to numberOfNodes) {
+      println("Lookup for Node : " + i)
+      var nodeName = Utilities.mkHash(i.toString, Simulator.chordSize)
+      var node = system.actorSelection(pathPrefix + nodeName)
+      node ! new insertKey(numberOfRequests);
+    }
+
+    // time delay
+    Utilities.buffer()
+    Thread.sleep(10000)
+
+    println("Number of Nodes: " + numberOfNodes)
+    println("Number of Requests: " + numberOfRequests)
+    println("Keys Searched: " + count)
+    println("Number of hops: " + TotalHops)
+    println("Avg. number of hops:" + TotalHops.toDouble / (numberOfNodes * numberOfRequests))
+    println("Terminated")
+    System.exit(0)
     sys.exit()
   }
 }
