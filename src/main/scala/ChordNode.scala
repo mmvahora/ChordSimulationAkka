@@ -1,3 +1,4 @@
+import Simulator.pathPrefix
 import akka.actor.Actor
 import org.slf4j.LoggerFactory
 
@@ -11,6 +12,8 @@ case class get_successor() extends Algorithms
 case class set_successor(name: Int, newNode: Boolean) extends Algorithms
 case class search_successor(key: Int, current: Int, i: Int) extends Algorithms
 case class printTable() extends Algorithms
+case class insertKey(numRequests: Int) extends Algorithms
+case class addKeyToNode(keyHash: Int) extends Algorithms
 
 class ChordNode(val nodeID: Int) extends Actor {
 
@@ -187,50 +190,49 @@ class ChordNode(val nodeID: Int) extends Actor {
         }
       }
     }
-
     case printTable() => {
       Utilities.printFingerTable(this)
     }
-  }
 
-  /*def checkSuccessor(key: Int): Boolean = {
-    var checkSucc = false
-    if (predecessor < nodeID) {
-      checkSucc = (predecessor <= key) && (key < nodeID)
-    } else {
-      checkSucc = Utilities.checkGreaterCondition(predecessor, key, nodeID)
-    }
-    checkSucc
-  }
-
-  def checkPredecessor(key: Int): Boolean = {
-    var checkPred = false
-    if (successor > nodeID) {
-      checkPred = (key <= successor) && (key > nodeID)
-    } else {
-      checkPred = Utilities.checkGreaterCondition(nodeID, key, successor)
-    }
-    checkPred
-  }
-
-  def closestPrecedingFinger(key: Int): Int = {
-    var keyFound = Integer.MIN_VALUE
-    var lowerNbr = Integer.MAX_VALUE
-    var higherNbr = Integer.MAX_VALUE
-    var positiveValFound = false
-    for (i <- 0 until fingerTable.size) {
-      val diff = key - fingerTable(i)
-      if (0 < diff && diff < higherNbr) {
-        keyFound = i;
-        higherNbr = diff
-        positiveValFound = true
-      } else if (diff < 0 && diff < lowerNbr && !positiveValFound) {
-        keyFound = i;
-        lowerNbr = diff
+    case insertKey(numRequests: Int) => {
+      for (i <- 1 to numRequests) {
+        val Key = Utilities.mkHash(Simulator.pathPrefix + nodeID + i, Simulator.chordSize)
+        Simulator.keyToMovies(Key) = Simulator.movies_list(Simulator.movies_count)
+        Simulator.movies_count = Simulator.movies_count + 1
+        Thread.sleep(10)
+        self ! addKeyToNode(Key)
       }
     }
-    keyFound
-  } */
+
+    case addKeyToNode(keyHash: Int) => {
+      Simulator.TotalHops = Simulator.TotalHops + 1;
+      var successorCheck = 0
+      var predecessorCheck = 0
+
+      //checks the successor node
+      if (checkSuccessor(keyHash)) {
+        Simulator.count = Simulator.count + 1
+        Simulator.keyToNode(keyHash) = nodeID
+        println(keyHash + " -> "  +Simulator.keyToMovies(keyHash))
+        println( keyHash + " -> " +Simulator.keyToNode(keyHash) + " Node")
+        successorCheck = 1
+      }
+      //if successsor not found, checks the predeccessor
+      if(successorCheck == 0){
+        if(checkPredecessor(keyHash)){
+          context.actorSelection(Simulator.pathPrefix + successor) ! addKeyToNode(keyHash)
+          predecessorCheck = 1
+        }
+        //if both successor and predeccessor not found
+        else if (predecessorCheck == 0){
+          context.actorSelection(Simulator.pathPrefix + fingerTable(closestPrecedingFinger(keyHash))) ! addKeyToNode(keyHash)
+        }
+      }
+    }
+
+  }
+
+
 
   def checkSuccessor(key: Int): Boolean = {
 
