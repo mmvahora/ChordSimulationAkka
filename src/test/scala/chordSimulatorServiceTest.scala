@@ -84,20 +84,7 @@ class chordSimulatorServiceTest
 
   //submitJob
   "Submit job" should "Process movies.csv" in {
-//    val postBody : Map[String, JsValue] = Map(
-//      "numUsers" -> JsNumber(10),
-//      "numComputers" -> JsNumber(10),
-//      "fingerSize" -> JsNumber(5),
-//      "perActorMinReq" -> JsNumber(10),
-//      "perActorMaxReq" -> JsNumber(20),
-//      "simulationDuration" -> JsNumber(30),
-//      "timeMarks" -> JsArray(Vector(JsNumber(5), JsNumber(10))),
-//      "fileID" -> JsString("movies.csv"),
-//      "readWriteRatio" -> JsNumber(0.5F)
-//    )
-
     val job = Job(2, 2, 5, 10, 20, 15, List(5, 10), "movies.csv", 0.5F)
-
     val jobEntity = Marshal(job).to[MessageEntity].futureValue
     var posted = false
 
@@ -105,6 +92,13 @@ class chordSimulatorServiceTest
       posted = true
 
       status shouldBe StatusCodes.OK
+
+      var jsobj = responseAs[String].parseJson.asJsObject()
+      System.out.println(jsobj.toString) // @todo remove debug
+
+      jsobj.fields("OK").convertTo[Boolean] shouldBe true
+
+
 
 //      val jsobj = responseAs[String].parseJson.asJsObject()
 //      jsobj.fields("OK").convertTo[Boolean] shouldBe true

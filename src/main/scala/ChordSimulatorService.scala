@@ -1,9 +1,10 @@
 import java.io.{EOFException, RandomAccessFile}
 import java.nio.file.Paths
 import java.util.UUID
-import java.util.concurrent.TimeUnit
+import java.util.concurrent.{ConcurrentHashMap, TimeUnit}
+import java.util.concurrent.atomic.{AtomicInteger, AtomicLong}
 
-import akka.actor.{ActorRef, ActorSystem, Props}
+import akka.actor.{ActorRef, ActorSystem, PoisonPill, Props}
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import akka.http.scaladsl.server.{Directives, Route}
@@ -15,6 +16,7 @@ import com.typesafe.config.ConfigFactory
 import org.slf4j.LoggerFactory
 import spray.json.{DefaultJsonProtocol, _}
 
+import scala.collection.JavaConverters._
 import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 import scala.concurrent.duration._
@@ -22,11 +24,6 @@ import scala.concurrent.{Await, ExecutionContextExecutor}
 import scala.io.StdIn
 import scala.util.control.Breaks._
 import scala.util.{Failure, Random, Success}
-
-import java.util.concurrent.ConcurrentHashMap
-import java.util.concurrent.atomic.AtomicLong
-
-import scala.collection.JavaConverters._
 
 // Request Job class (to handle json post)
 final case class Job(
@@ -58,6 +55,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
   private val stats = new ConcurrentHashMap[String, AtomicLong]()
   final val READ: Byte = 0
   final val WRITE: Byte = 0
+  private val hopCounts = new ConcurrentHashMap[Int, AtomicInteger]()
 
   def main(args: Array[String]): Unit = {
     val route = getRoutes
@@ -97,12 +95,6 @@ object ChordSimulatorService extends Directives with JsonSupport {
                 complete(JSONResponse.Failure("File must be CSV"))
               }
           }
-        }
-      },
-
-      path("submitJob2") {
-        post {
-          complete("OK")
         }
       },
 
@@ -215,6 +207,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
 
                   // collect results (if indicated by timeMarks)
                   var collectCount = 0
+                  var computerCollectCount = 0
 
                   if (job.timeMarks.contains(timeCounter)) {
                     logging.info("Taking snapshot...")
@@ -242,15 +235,38 @@ object ChordSimulatorService extends Directives with JsonSupport {
                         case _ => logging.error("Invalid collect status")
                       }
                     }
+
+                    var computerCollectCount = computers.length
+                    for ((computer, i) <- computers.zipWithIndex) {
+                      ask(computer, nodeCollect()).mapTo[ConcurrentHashMap[Int, AtomicInteger]].onComplete {
+                        case Success(computerStats) =>
+                          logging.info("Collect from computer " + i)
+
+                          // add stats
+                          for ((k, v) <- computerStats.asScala.toMap) {
+                            hopCounts.putIfAbsent(k, new AtomicInteger(0))
+                            hopCounts.get(k).addAndGet(v.get)
+                          }
+
+                          computerCollectCount -= 1
+
+                        case Failure(e) =>
+                          hasError = true
+                          logging.error("Unable to collect from computer - " + e.getMessage)
+                          computerCollectCount -= 1
+
+                        case _ => logging.error("Invalid collect status")
+                      }
+                    }
                   }
 
                   var waitTimeout = 0
                   do {
                     Thread.sleep(timeInterval * 1000)
                     waitTimeout += timeInterval
-                  } while (collectCount > 0 && waitTimeout <= 5)
+                  } while (collectCount > 0 && waitTimeout <= 2)
 
-                  if (waitTimeout > 5) {
+                  if (waitTimeout > 2) {
                     // timeout with collect... so stop simulation
                     logging.error("Simulation stopped due to collect timeout")
                     chordSystem.terminate()
@@ -259,15 +275,19 @@ object ChordSimulatorService extends Directives with JsonSupport {
                   }
                 }
 
-                Await.ready(chordSystem.whenTerminated, Duration(job.simulationDuration + 5, TimeUnit.SECONDS))
-                chordSystem.terminate()
+                // send PoisonPill to all (will be processed after all other messages sent...)
+                users.foreach( _ ! PoisonPill )
+                computers.foreach( _ ! PoisonPill )
+
+                Await.ready(chordSystem.whenTerminated, Duration(job.simulationDuration + 10, TimeUnit.SECONDS))
+                //chordSystem.terminate()
 
                 dataRAF.close()
 
                 if (hasError) {
                   complete(JSONResponse.Success(Map("Status" -> "Error")))
                 } else {
-                  complete(JSONResponse.Success(Map("Status" -> "OK")))
+                  complete(JSONResponse.Success(Map("Status" -> "OK", "stats" -> statsToJson(stats), "hopCounts" -> hopToJson(hopCounts))))
                 }
               }
           }
@@ -276,6 +296,16 @@ object ChordSimulatorService extends Directives with JsonSupport {
 
     route
   }
+
+  def statsToJson(i : ConcurrentHashMap[String, AtomicLong]) : String = {
+    i.asScala.map( f => (f._1, f._2.get)).toMap.toJson.toString
+  }
+
+  def hopToJson(i : ConcurrentHashMap[Int, AtomicInteger]) : String = {
+    i.asScala.map( f => (f._1, f._2.get)).toMap.toJson.toString
+  }
+
+//  hopCounts.toJson.toString
 
   private def getFromFile(dataRAF : RandomAccessFile): String = {
     try {
@@ -302,11 +332,14 @@ object ChordSimulatorService extends Directives with JsonSupport {
     val computerActor = actor.actorOf(props, hashName)
     computers += computerActor
     computerActor ! joinNode(firstNodeHash)
+
+    // allow first node to come up before rest
+    if (firstNodeHash == -1) Thread.sleep(1000) else Thread.sleep(200)
   }
 
   private def buildUserActor(userNodeID: Int, job: Job, actor: ActorSystem): Unit = {
     val userName = "u-" + userNodeID
-    val props = Props(classOf[actorUser], userName)
+    val props = Props(classOf[actorUser], userName, job.fingerSize)
     val userActor = actor.actorOf(props, userName)
     users += userActor
   }

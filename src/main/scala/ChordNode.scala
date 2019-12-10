@@ -1,7 +1,14 @@
+import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.atomic.AtomicInteger
+
 import akka.actor.Actor
 import org.slf4j.LoggerFactory
 
+import scala.collection.mutable
+
 sealed trait Algorithms
+case class addData(dataHash : Int) extends Algorithms
+case class findKey(dataHash : Int) extends Algorithms
 case class joinNode(nodeID: Int) extends Algorithms
 case class fixFinger(node: Int, i: Int) extends Algorithms
 case class updateFingers() extends Algorithms
@@ -11,17 +18,37 @@ case class get_successor() extends Algorithms
 case class set_successor(name: Int, newNode: Boolean) extends Algorithms
 case class search_successor(key: Int, current: Int, i: Int) extends Algorithms
 case class printTable() extends Algorithms
+case class nodeCollect() extends Algorithms
 
 class ChordNode(val nodeID: Int) extends Actor {
+  final val NOT_FOUND = -1
+  final val ERROR = -2
 
   val logger = LoggerFactory.getLogger(this.getClass)
   var fingerTable = collection.mutable.Map[Int, Int]()
   var successor: Int = -1
   var predecessor: Int = -1
   var nodeInRing: Boolean = false
+  var keys = new mutable.HashSet[Int]()
+
+  private val hopCounts = new ConcurrentHashMap[Int, AtomicInteger]()
 
 
   def receive = {
+    // Collect Hop Counts from Nodes
+    case nodeCollect() => {
+      sender ! hopCounts
+    }
+
+    case findKey(dataHash : Int) => {  // @todo replace real version
+      hopCounts.get(1).incrementAndGet()
+      1
+    }
+
+    case addData(dataHash : Int) => {
+      keys.add(dataHash)
+    }
+
     /**
      * When the first node joins the network, its successor and predecessor is set to itself.
      * The entries of the finger table will be initially pointed to itself.
