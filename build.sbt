@@ -10,6 +10,7 @@ lazy val root = (project in file("."))
     name := "ChordSimulation",
     resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/",
     libraryDependencies +="org.slf4j" % "slf4j-api" % "1.7.28",
+    libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3",
     libraryDependencies +="com.typesafe" % "config" % "1.3.2",
     libraryDependencies +="org.scalatest" %% "scalatest" % "3.0.5" % "test",
     libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.26",
