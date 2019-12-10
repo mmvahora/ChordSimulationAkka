@@ -1,1 +1,1 @@
-fingerSpace:10
+fingerSpace:20
