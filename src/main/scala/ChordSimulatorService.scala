@@ -218,7 +218,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
                     collectCount = users.length
 
                     for ((user, i) <- users.zipWithIndex) {
-                      ask(user, collect()).mapTo[mutable.HashMap[String, Int]].onComplete {
+                      ask(user, collect()).mapTo[Map[String, Int]].onComplete {
                         case Success(userStats) =>
                           logging.info("Collect from user " + i)
 

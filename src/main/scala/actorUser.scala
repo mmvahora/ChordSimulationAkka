@@ -25,7 +25,7 @@ class actorUser(name : String) extends Actor {
 
   def doCollect() : Map[String, Int] = {
     val jH = new java.util.HashMap[String, Int](stats)
-    jH.asScala.toMap
+    jH.asScala.toMap[String, Int]
   }
 
   def receive: PartialFunction[Any, Unit] = {
