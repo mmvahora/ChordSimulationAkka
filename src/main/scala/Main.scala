@@ -14,7 +14,7 @@ object Simulator {
   val chordSize = Utilities.getChordSize(fingerSize)
 
   //setting the path reference
-  val pathPrefix = "akka://" + "system" + "/user/"
+  val pathPrefix = "akka://" + "chord-system" + "/user/"
 
   var nodesInChord: Int = 0;
   var flag: AtomicBoolean = new AtomicBoolean(true)

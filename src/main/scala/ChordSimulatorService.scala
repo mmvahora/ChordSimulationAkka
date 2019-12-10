@@ -23,6 +23,11 @@ import scala.io.StdIn
 import scala.util.control.Breaks._
 import scala.util.{Failure, Random, Success}
 
+import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.atomic.AtomicLong
+
+import scala.collection.JavaConverters._
+
 // Request Job class (to handle json post)
 final case class Job(
     numUsers: Int,
@@ -50,7 +55,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
   private var computers = new ListBuffer[ActorRef]()
   private val logging = LoggerFactory.getLogger("Service")
   private var isPaused = false
-  private val stats = new mutable.HashMap[String, Int]()
+  private val stats = new ConcurrentHashMap[String, AtomicLong]()
   final val READ: Byte = 0
   final val WRITE: Byte = 0
 
@@ -195,7 +200,6 @@ object ChordSimulatorService extends Directives with JsonSupport {
                   for (user <- users) {
                     val userExecutionPlan = executionPlan.get(user.toString())
                     val userPlan = userExecutionPlan.get(timeCounter)
-//                    val userPlan = executionPlan.get(user.toString()).asInstanceOf[Array[ListBuffer[Byte]]](timeCounter)
 
                     // "ask" each user to read or write
                     for (task <- userPlan) {
@@ -218,13 +222,14 @@ object ChordSimulatorService extends Directives with JsonSupport {
                     collectCount = users.length
 
                     for ((user, i) <- users.zipWithIndex) {
-                      ask(user, collect()).mapTo[Map[String, Int]].onComplete {
+                      ask(user, collect()).mapTo[ConcurrentHashMap[String, AtomicLong]].onComplete {
                         case Success(userStats) =>
                           logging.info("Collect from user " + i)
 
                           // add stats
-                          for ((k, v) <- userStats) {
-                            stats(k) += v
+                          for ((k, v) <- userStats.asScala.toMap) {
+                            stats.putIfAbsent(k, new AtomicLong(0L))
+                            stats.get(k).addAndGet(v.get)
                           }
 
                           collectCount -= 1
@@ -233,6 +238,8 @@ object ChordSimulatorService extends Directives with JsonSupport {
                           hasError = true
                           logging.error("Unable to collect from user - " + e.getMessage)
                           collectCount -= 1
+
+                        case _ => logging.error("Invalid collect status")
                       }
                     }
                   }
@@ -241,17 +248,19 @@ object ChordSimulatorService extends Directives with JsonSupport {
                   do {
                     Thread.sleep(timeInterval * 1000)
                     waitTimeout += timeInterval
-                  } while (collectCount > 0 || waitTimeout > 5)
+                  } while (collectCount > 0 && waitTimeout <= 5)
 
                   if (waitTimeout > 5) {
                     // timeout with collect... so stop simulation
                     logging.error("Simulation stopped due to collect timeout")
+                    chordSystem.terminate()
                     hasError = true
                     break
                   }
                 }
 
-                Await.ready(chordSystem.whenTerminated, Duration(job.simulationDuration + .25, TimeUnit.MINUTES))
+                Await.ready(chordSystem.whenTerminated, Duration(job.simulationDuration + 5, TimeUnit.SECONDS))
+                chordSystem.terminate()
 
                 dataRAF.close()
 

@@ -96,7 +96,7 @@ class chordSimulatorServiceTest
 //      "readWriteRatio" -> JsNumber(0.5F)
 //    )
 
-    val job = Job(2, 2, 5, 10, 20, 30, List(5, 10), "movies.csv", 0.5F)
+    val job = Job(2, 2, 5, 10, 20, 15, List(5, 10), "movies.csv", 0.5F)
 
     val jobEntity = Marshal(job).to[MessageEntity].futureValue
     var posted = false
