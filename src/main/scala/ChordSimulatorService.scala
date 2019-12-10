@@ -68,6 +68,5 @@ object ChordSimulatorService extends Directives with JsonSupport {
     bindingFuture
       .flatMap(_.unbind()) // trigger unbinding from the port
       .onComplete(_ => system.terminate()) // and shutdown when done
-
   }
 }
