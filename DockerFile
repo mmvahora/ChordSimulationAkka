@@ -1,0 +1,12 @@
+FROM java:openjdk-8-jre
+RUN /usr/bin/apt-get update && \
+    /usr/bin/apt-get clean && \
+    /usr/sbin/locale-gen en_US en_US.UTF-8 && \
+    /usr/sbin/useradd -r -s /bin/false -d /srv chorduser
+COPY target/scala-2.11/chordSimulation.jar /srv/chordSimulation.jar
+COPY bin/run-docker.sh /srv/run.sh  //??
+COPY lib/etc /srv/etc
+RUN chown -R chorduser /srv && chmod 0544 /srv/run.sh
+USER chorduser
+ENTRYPOINT /srv/run.sh
+

@@ -172,6 +172,14 @@ class ChordNode(val hashName: Int, val abstractName: String, val requests: Int) 
       }
     }
 
+    case Messages.read(key : String) => {
+      1
+    }
+
+    case Messages.write(key : String) => {
+      1
+    }
+
     case Messages.printTable() => {
       Utilities.printFingerTable(this)
     }
