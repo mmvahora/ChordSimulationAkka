@@ -1,19 +1,28 @@
 import java.nio.file.Paths
 
-import akka.http.scaladsl.model.{ContentTypes, HttpEntity, Multipart, StatusCodes}
+import akka.http.scaladsl.marshalling.Marshal
+import akka.http.scaladsl.model._
 import akka.http.scaladsl.testkit.ScalatestRouteTest
 import com.typesafe.config.{Config, ConfigFactory}
 import org.scalatest.{BeforeAndAfterAll, FlatSpec, Matchers}
 import spray.json._
-import DefaultJsonProtocol._
-
+import org.scalatest.concurrent.ScalaFutures
 import scala.io.Source
+
+
+//import scala.concurrent.ExecutionContext.Implicits.global
+//
+//trait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {
+//  implicit val jobFormat: RootJsonFormat[Job] = jsonFormat9(Job)
+//}
 
 class chordSimulatorServiceTest
   extends FlatSpec
   with Matchers
   with BeforeAndAfterAll
-  with ScalatestRouteTest {
+  with ScalaFutures
+  with ScalatestRouteTest
+  with JsonSupport {
 
   val conf: Config = ConfigFactory.load("chordConfig")
   private val route = ChordSimulatorService.getRoutes
@@ -74,5 +83,41 @@ class chordSimulatorServiceTest
   }
 
   //submitJob
+  it should "Process movies.csv" in {
+//    val postBody : Map[String, JsValue] = Map(
+//      "numUsers" -> JsNumber(10),
+//      "numComputers" -> JsNumber(10),
+//      "fingerSize" -> JsNumber(5),
+//      "perActorMinReq" -> JsNumber(10),
+//      "perActorMaxReq" -> JsNumber(20),
+//      "simulationDuration" -> JsNumber(30),
+//      "timeMarks" -> JsArray(Vector(JsNumber(5), JsNumber(10))),
+//      "fileID" -> JsString("movies.csv"),
+//      "readWriteRatio" -> JsNumber(0.5F)
+//    )
 
+    val job = Job(10, 10, 5, 10, 20, 30, List(5, 10), "movies.csv", 0.5F)
+
+    val jobEntity = Marshal(job).to[MessageEntity].futureValue
+    var posted = false
+
+    Post("/submitJob").withEntity(jobEntity) ~> route ~> check {
+      posted = true
+
+      status shouldBe StatusCodes.OK
+
+//      val jsobj = responseAs[String].parseJson.asJsObject()
+//      jsobj.fields("OK").convertTo[Boolean] shouldBe true
+//      jsobj.fields("fileID").convertTo[String] should not be empty
+//
+//      // verify file
+//      val s = Source.fromFile(Paths.get(conf.getString("FILE_SAVE_PATH"), jsobj.fields("fileID").convertTo[String]).toFile)
+//      val contacts = s.mkString
+//      s.close()
+//
+//      contacts shouldBe "\"MovieOne\",\"One\"\n\"MovieTwo\",\"Two\""
+    }
+
+    posted shouldBe true
+  }
 }

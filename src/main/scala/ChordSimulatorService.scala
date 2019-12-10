@@ -34,14 +34,11 @@ final case class Job(
     simulationDuration: Int,
     timeMarks: List[Int],
     fileID: String,
-    minRecordSize: Int,
-    maxRecordSize: Int,
-    avgRecordSize: Int,
     readWriteRatio: Float
   )
 
 trait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {
-  implicit val jobFormat: RootJsonFormat[Job] = jsonFormat12(Job)
+  implicit val jobFormat: RootJsonFormat[Job] = jsonFormat9(Job)
 }
 
 object ChordSimulatorService extends Directives with JsonSupport {
@@ -72,7 +69,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
 
   def getRoutes: Route = {
     // routes implementation reference https://doc.akka.io/docs/akka-http/current/common/json-support.html
-    val route =
+    val route = concat(
       path("submitFile") {
         post {
           val uuid = UUID.randomUUID.toString
@@ -97,10 +94,15 @@ object ChordSimulatorService extends Directives with JsonSupport {
               }
           }
         }
-      }
+      },
 
-    path("submitJob") {
-      extractRequestContext { ctx =>
+      path("submitJob2") {
+        post {
+          complete("OK")
+        }
+      },
+
+      path("submitJob") {
         post {
           entity(as[Job]) {
             job =>
@@ -184,6 +186,8 @@ object ChordSimulatorService extends Directives with JsonSupport {
                   executionPlan(user.toString) = userExecutionPlan
                 }
 
+                logging.debug(executionPlan.mkString)
+
                 // event loop
                 while (timeCounter <= job.simulationDuration) {
                   // action -- fire events and log
@@ -256,8 +260,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
               }
           }
         }
-      }
-    }
+    })
 
     route
   }
