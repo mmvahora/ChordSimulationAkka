@@ -15,7 +15,6 @@ object Simulator {
    val chordSize = Utilities.getChordSize(fingerSize)
 
   def main(args: Array[String]): Unit = {
-
     val numNodes = 10
     val numRequests = 5
 
@@ -25,14 +24,14 @@ object Simulator {
 
     for (i <- 1 to numNodes) {
       if (startNode == -1) {
-        startNode = Hashing.getHash(i.toString(), chordSize)
-        node1 = actor.actorOf(Props(new ChordNode(startNode, i.toString(), numRequests)), startNode.toString())
+        startNode = Hashing.getHash(i.toString, chordSize)
+        node1 = actor.actorOf(Props(new ChordNode(startNode, i.toString, numRequests)), startNode.toString)
         node1 ! new Messages.join(-1)
         Thread.sleep(1000)
       } else {
         var x = checker.get()
-        var hashName = Hashing.getHash(i.toString(), chordSize)
-        var node = actor.actorOf(Props(new ChordNode(hashName, i.toString(), numRequests)), hashName.toString())
+        var hashName = Hashing.getHash(i.toString, chordSize)
+        var node = actor.actorOf(Props(new ChordNode(hashName, i.toString, numRequests)), hashName.toString)
         node ! new Messages.join(startNode)
       }
     }

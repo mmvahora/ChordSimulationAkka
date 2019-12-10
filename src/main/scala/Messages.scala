@@ -11,4 +11,6 @@ object Messages {
   case class fixfinger(node: Int, i: Int) extends ChordMessage
   case class updateFingers() extends ChordMessage
   case class printTable() extends ChordMessage
+  case class read(key : String) extends ChordMessage
+  case class write(key : String) extends ChordMessage
 }
