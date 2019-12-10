@@ -1,37 +1,37 @@
 
+import java.util.concurrent.ConcurrentHashMap
+
 import akka.actor.Actor
 import org.slf4j.LoggerFactory
 
-import scala.collection.mutable
+import scala.collection.JavaConverters._
 
-object actorUser {
-//  def apply(groupId: String, deviceId: String): Behavior[Command] = Behaviors.setup(context => new actorUser(context))
-
-  sealed trait Command
-  final case class read(key : String) extends Command
-  final case class write(key : String) extends Command
-  final case class collect() extends Command
-}
+sealed trait UserCommands
+final case class read(key : String) extends UserCommands
+final case class write(key : String) extends UserCommands
+final case class collect() extends UserCommands
 
 class actorUser(name : String) extends Actor {
-  import actorUser._
-  private val stats = new mutable.HashMap[String, Int]()
+  private val stats = new ConcurrentHashMap[String, Int]()
   private val logging = LoggerFactory.getLogger("User")
 
-  def read(key : String) : Int = {  // @todo
+  def doRead(key : String) : Int = {  // @todo
     1
   }
 
-  def write(key : String) : Int = {  // @todo
+  def doWrite(key : String) : Int = {  // @todo
     2
   }
 
-  def collect() : mutable.HashMap[String, Int] = {
-    stats
+  def doCollect() : Map[String, Int] = {
+    val jH = new java.util.HashMap[String, Int](stats)
+    jH.asScala.toMap
   }
 
   def receive: PartialFunction[Any, Unit] = {
-    case read(key) => read(key)
-    case write(key) => write(key)    case collect() => collect()
+    case read(key) => sender() ! doRead(key)
+    case write(key) => sender() ! doWrite(key)
+    case collect() => sender() ! doCollect()
+    case _ => logging.info("Received unknown message")
   }
 }

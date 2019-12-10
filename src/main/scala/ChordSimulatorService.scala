@@ -3,7 +3,6 @@ import java.nio.file.Paths
 import java.util.UUID
 import java.util.concurrent.TimeUnit
 
-import actorUser.{read, write}
 import akka.actor.{ActorRef, ActorSystem, Props}
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
@@ -115,7 +114,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
                 val chordSystem = ActorSystem("chord-system")
 
                 // create nodes
-                val firstNodeHash = Hashing.getHash("1", Utilities.getChordSize(job.fingerSize))
+                val firstNodeHash =  Utilities.mkHash("1", Utilities.getChordSize(job.fingerSize))
                 buildComputerActor(1, job, chordSystem)
 
                 // build nodes after first
@@ -148,7 +147,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
 
                   // build up execution plan randomly
                   val numTicks = (job.simulationDuration / timeInterval).floor.toInt
-                  val userExecutionPlan: Array[ListBuffer[Byte]] = Array.fill[ListBuffer[Byte]](numTicks)(ListBuffer[Byte]())
+                  val userExecutionPlan: Array[ListBuffer[Byte]] = Array.fill[ListBuffer[Byte]](numTicks+1)(ListBuffer[Byte]())
 
                   // build reads and write execution path for this user
                   var needRead = true
@@ -194,7 +193,9 @@ object ChordSimulatorService extends Directives with JsonSupport {
                 while (timeCounter <= job.simulationDuration) {
                   // action -- fire events and log
                   for (user <- users) {
-                    val userPlan = executionPlan.get(user.toString()).asInstanceOf[Array[List[Byte]]](timeCounter)
+                    val userExecutionPlan = executionPlan.get(user.toString())
+                    val userPlan = userExecutionPlan.get(timeCounter)
+//                    val userPlan = executionPlan.get(user.toString()).asInstanceOf[Array[ListBuffer[Byte]]](timeCounter)
 
                     // "ask" each user to read or write
                     for (task <- userPlan) {
@@ -217,7 +218,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
                     collectCount = users.length
 
                     for ((user, i) <- users.zipWithIndex) {
-                      ask(user, actorUser.collect()).mapTo[mutable.HashMap[String, Int]].onComplete {
+                      ask(user, collect()).mapTo[mutable.HashMap[String, Int]].onComplete {
                         case Success(userStats) =>
                           logging.info("Collect from user " + i)
 
@@ -250,7 +251,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
                   }
                 }
 
-                Await.ready(chordSystem.whenTerminated, Duration(job.simulationDuration + 0.25, TimeUnit.MINUTES))
+                Await.ready(chordSystem.whenTerminated, Duration(job.simulationDuration + .25, TimeUnit.MINUTES))
 
                 dataRAF.close()
 
@@ -283,25 +284,21 @@ object ChordSimulatorService extends Directives with JsonSupport {
 
 
   private def buildComputerActor(computerNodeID: Int, job: Job, actor: ActorSystem): Unit = {
-    buildComputerActor(computerNodeID.toString, job, actor, -1)
+    buildComputerActor(computerNodeID, job, actor, -1)
   }
 
   private def buildComputerActor(computerNodeID: Int, job: Job, actor: ActorSystem, firstNodeHash: Int): Unit = {
-    buildComputerActor(computerNodeID.toString, job, actor, firstNodeHash)
-  }
-
-  private def buildComputerActor(computerNodeID: String, job: Job, actor: ActorSystem, firstNodeHash: Int): Unit = {
-    val hashName = Hashing.getHash("c-" + computerNodeID, Utilities.getChordSize(job.fingerSize)).toString
-    val props = Props(classOf[ChordNode], hashName, "c-" + computerNodeID, 10) // 10 hmmm... where is this used @todo
+    val hashName = Utilities.mkHash(computerNodeID.toString, Utilities.getChordSize(job.fingerSize)).toString
+    val props = Props(classOf[ChordNode], computerNodeID)
     val computerActor = actor.actorOf(props, hashName)
     computers += computerActor
-    computerActor ! Messages.join(firstNodeHash)
+    computerActor ! joinNode(firstNodeHash)
   }
 
   private def buildUserActor(userNodeID: Int, job: Job, actor: ActorSystem): Unit = {
-    val hashName = Hashing.getHash("u-" + userNodeID, Utilities.getChordSize(job.fingerSize)).toString
-    val props = Props(classOf[actorUser], hashName)
-    val userActor = actor.actorOf(props, hashName)
+    val userName = "u-" + userNodeID
+    val props = Props(classOf[actorUser], userName)
+    val userActor = actor.actorOf(props, userName)
     users += userActor
   }
 }
