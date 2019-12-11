@@ -132,48 +132,71 @@ We ran 3 separate simulations with different parameters. The parameters are the 
 Time Taken 83 ms
 
 Node : 439303793 Hop Count : 10
+
 Node : 158771893 Hop Count : 24
+
 .
 .
 .
 Node : 729019316 Hop Count : 853
+
 Node : 566422674 Hop Count : 902
+
 Number of Nodes: 500
+
 Number of Requests: 10
+
 Keys Searched: 4980
+
 Total hops: 276007
+
 Avg. number of hops:55.2014
 
 **Simulation 2**
 
 Time Taken 58 ms
+
 Node : 433373942 Hop Count : 38
+
 Node : 44319321 Hop Count : 59
 .
 .
 .
 Node : 428991422 Hop Count : 47
+
 Node : 526259603 Hop Count : 12
+
 Number of Nodes: 100
+
 Number of Requests: 100
+
 Keys Searched: 9971
+
 Total hops: 101918
+
 Avg. number of hops:10.1918
 
 **Simulation 3**
 
 Time Taken 110 ms
 Node : 158771893 Hop Count : 19
+
 Node : 196040290 Hop Count : 17
 .
 .
 .
 Node : 664415054 Hop Count : 1830
+
 Node : 126072343 Hop Count : 989
+
 Number of Nodes: 1000
+
 Number of Requests: 10
+
 Keys Searched: 9963
+
 Total hops: 912595
+
 Avg. number of hops:91.2595
 
 * Based on the total runtime for each simulation, the number of total nodes seemingly has more of an affect than the number of requests per user. Simulation 2 has 10x the number of requests of the other 2, but has the lowest runtime. Keeping with that, Simulation 3 has a higher runtime than Simulation 2, which is because the increased ChordSpace size (total nodes).
