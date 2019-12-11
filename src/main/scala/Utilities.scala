@@ -182,6 +182,15 @@ object Utilities {
     List(stateOne && !stateTwo , !stateOne && stateTwo).reduce(_||_)
   }
 
+  /*
+  Used for closestprecedingfinger conditions
+  */
+  def checkLesserCondition(a: Int, b: Int, c: Boolean): Boolean =
+  {
+    val cond1 = ((a<0) && (a<b))
+    (cond1 && (c==false))
+  }
+
   def printFingerTable(Node : ChordNode) : Unit = {
     println("** Finger Table of " + Node.nodeID + " ***")
     println("Predecessor: " + Node.predecessor + " Successor: " + Node.successor + " Hop Count " +Node.hopCount)

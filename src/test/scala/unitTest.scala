@@ -14,6 +14,27 @@ class unitTest extends FunSuite {
     assert(test.length > 0)
   }
 
+  test("checkMsgDgstSpecified"){
+    val test = conf.getString("MSG_DGST")
+    assert(test.length > 0)
+  }
+
+  test("CheckCSVLoads")
+  {
+    val fileStream = getClass.getResourceAsStream("/movies.csv")
+    val lines = Source.fromInputStream(fileStream).getLines
+    assert(lines.next()!=null)
+  }
+
+  test("CheckCSVLines")
+  {
+    val fileStream = getClass.getResourceAsStream("/movies.csv")
+    val lines = Source.fromInputStream(fileStream).getLines
+    var count=0
+    lines.foreach(line=>count=count+1)
+    assert(count==15454)
+  }
+
   test("checkFingerSize") {
     val size = Utilities.getFingerSize("input.txt")
     assert(size == 20)
@@ -63,6 +84,32 @@ class unitTest extends FunSuite {
     val res = Utilities.getNodeForKey("Titanic", nodeData, movieData)
     assert(res == 10)
 
+  }
+
+    test("CheckLesserConditionTrue")
+  {
+    val check=Utilities.checkLesserCondition(-100, 0, false )
+    assert(check)
+  }
+
+  test("CheckLesserConditionFalse")
+  {
+    val check=Utilities.checkLesserCondition(-100, 0, true )
+    assert(!check)
+  }
+
+  test("TestHashString")
+  {
+    var check =0
+    check=Utilities.mkHash("title", Utilities.getChordSize(10))
+    assert(check>0)
+  }
+
+  test("TestHashEmpty")
+  {
+    var check =0
+    check=Utilities.mkHash("", Utilities.getChordSize(10))
+    assert(check==0)
   }
 
 

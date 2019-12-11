@@ -31,6 +31,8 @@ assemblyMergeStrategy in assembly := {
   case x => MergeStrategy.first
 }
 
+trapExit := false
+
 dockerfile in docker := {
   // The assembly task generates a fat JAR file
   val artifact: File = assembly.value

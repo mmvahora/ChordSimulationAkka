@@ -252,25 +252,23 @@ class ChordNode(val nodeID: Int) extends Actor {
   }
 
   def closestPrecedingFinger(key: Int): Int = {
-    var keyFound = 2147483647
-    var lowerBound = 2147483647
-    var maxBound = 2147483647
-    var positiveValFound = false
+    var result, lowerBound, maxBound = 2147483647
+    var isPos = false
 
     for (i <- 0 until fingerTable.size)
     {
-      var diff = key - fingerTable(i)
-      if (0 < diff && diff < maxBound)
+      if (0 < (key - fingerTable(i)) && (key - fingerTable(i)) < maxBound)
       {
-        keyFound = i;
-        maxBound = diff
-        positiveValFound = true
-      } else if (diff < 0 && diff < lowerBound && !positiveValFound)
+        result = i;
+        maxBound = (key - fingerTable(i))
+        isPos = true
+      }
+      else if (Utilities.checkLesserCondition((key - fingerTable(i)), lowerBound, isPos))
       {
-        keyFound = i;
-        lowerBound = diff
+        result = i;
+        lowerBound = (key - fingerTable(i))
       }
     }
-    keyFound
+    result
   }
 }

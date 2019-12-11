@@ -1,4 +1,3 @@
-title,lifetime_gross,year
 Star Wars: The Force Awakens,936662225,2015
 Avatar,760507625,2009
 Black Panther,700059566,2018
@@ -84,11 +83,9 @@ Up,293004164,2009
 Inception,292576195,2010
 The Twilight Saga: Breaking Dawn Part 2,292324737,2012
 Harry Potter and the Order of the Phoenix,292004738,2007
-"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",291710957,2005
 Man of Steel,291045518,2013
 The Empire Strikes Back,290475067,1980
 Harry Potter and the Goblet of Fire,290013036,2005
-"Monsters, Inc.",289916256,2001
 Home Alone,285761243,1990
 The Hunger Games: Mockingjay - Part 2,281723902,2015
 The Matrix Reloaded,281576461,2003
@@ -365,7 +362,6 @@ Taken,145000989,2009
 101 Dalmatians,144880014,1961
 The Great Gatsby (2013),144840419,2013
 The Santa Clause,144833357,1994
-"I, Robot",144801023,2004
 Lethal Weapon 3,144731527,1992
 The Fast and the Furious,144533925,2001
 Doctor Dolittle,144156605,1998
@@ -440,7 +436,6 @@ The Last Airbender,131772187,2010
 Rio 2,131538435,2014
 Lara Croft: Tomb Raider,131168070,2001
 The Silence of the Lambs,130742922,1991
-"Honey, I Shrunk the Kids",130724172,1989
 The Flintstones,130531208,1994
 Lethal Weapon 4,130444603,1998
 Get Smart,130319208,2008
@@ -457,7 +452,6 @@ Ghostbusters (2016),128350574,2016
 Kingsman: The Secret Service,128261724,2015
 Robots,128200012,2005
 Coming to America,128152301,1988
-"Crouching Tiger, Hidden Dragon",128078872,2000
 Shutter Island,128012934,2010
 Into the Woods,128002372,2014
 Rocky IV,127873716,1985
@@ -497,7 +491,6 @@ Something's Gotta Give,124728738,2003
 Traffic,124115725,2000
 The Birdcage,124060553,1996
 City Slickers,124033791,1991
-"Good Morning, Vietnam ",123922370,1987
 Rango,123477607,2011
 The Nutty Professor II: The Klumps,123309890,2000
 The Good Dinosaur,123087120,2015
@@ -743,7 +736,6 @@ The Princess Diaries 2: Royal Engagement,95170481,2004
 42,95020213,2013
 Unbreakable,95011339,2000
 The Book of Eli,94835059,2010
-"10,000 B.C.",94784201,2008
 Beverly Hills Chihuahua,94514402,2008
 Saturday Night Fever,94213184,1977
 Julie & Julia,94125426,2009
@@ -789,7 +781,6 @@ Prince of Persia: The Sands of Time,90759676,2010
 Antz,90757863,1998
 Scary Movie 4,90710620,2006
 The Game Plan,90648202,2007
-"Me, Myself and Irene",90570999,2000
 High School Musical 3: Senior Year,90559416,2008
 Tyler Perry's Madea Goes to Jail,90508336,2009
 Space Cowboys,90464773,2000
@@ -798,7 +789,6 @@ Get Hard,90411453,2015
 Trading Places,90404800,1983
 Red,90380162,2010
 Planes,90288712,2013
-"Legally Blonde 2: Red, White and Blonde",90186328,2003
 Mystic River,90135191,2003
 Terminator: Genisys,89760956,2015
 Flightplan,89707299,2005
@@ -859,7 +849,6 @@ The Poseidon Adventure,84563118,1972
 Tammy,84525432,2014
 The Santa Clause 3: The Escape Clause,84500122,2006
 Ferdinand,84410380,2017
-"Crazy, Stupid, Love.",84351197,2011
 Annabelle,84273813,2014
 Pinocchio,84254167,1940
 Scooby-Doo 2: Monsters Unleashed,84216833,2004
@@ -1005,7 +994,6 @@ Barbershop,75782105,2002
 The Intern,75764672,2015
 Star Trek: Generations,75671125,1994
 Contagion,75658097,2011
-"You, Me and Dupree",75628110,2006
 We Bought a Zoo,75624550,2011
 2 Guns,75612460,2013
 Braveheart,75609945,1995
@@ -1029,7 +1017,6 @@ Star Trek VI: The Undiscovered Country,74888996,1991
 The Prince of Tides,74787599,1991
 Ladder 49,74541707,2004
 Four Brothers,74494381,2005
-"Six Days, Seven Nights",74339294,1998
 No Country for Old Men,74283625,2007
 Alien: Covenant,74262031,2017
 Jack and Jill,74158157,2011
@@ -1084,7 +1071,6 @@ Grumpier Old Men,71518503,1995
 The Bridges of Madison County,71516617,1995
 Chocolat,71509363,2000
 Sideways,71503593,2004
-"I Love You, Man",71440011,2009
 Safe Haven,71349120,2013
 Christmas Vacation,71319526,1989
 Scary Movie 2,71308997,2001
@@ -1173,7 +1159,6 @@ The Bounty Hunter,67061228,2010
 Waiting to Exhale,67052156,1995
 The Secret of My Success,66995879,1987
 102 Dalmatians,66957026,2000
-"Alexander and the Terrible, Horrible, No Good, Very Bad Day",66954149,2014
 Kangaroo Jack,66934963,2003
 Skyscraper,66896620,2018
 End of Days,66889043,1999
@@ -1197,7 +1182,6 @@ The Divergent Series: Allegiant,66184051,2016
 Smokey and the Bandit II,66132626,1980
 Herbie: Fully Loaded,66023816,2005
 Magic Mike XXL,66013057,2015
-"What's Up, Doc?",66000000,1972
 The Manchurian Candidate,65955630,2004
 Anaconda,65885767,1997
 Bad Boys,65807024,1995
@@ -1374,7 +1358,6 @@ The Blue Lagoon,58853106,1980
 Bride Wars,58715510,2009
 Water for Elephants,58709717,2011
 Jack Reacher: Never Go Back,58697076,2016
-"Honey, I Blew Up the Kid",58662452,1992
 Little Man,58645052,2006
 Jack,58620973,1996
 RoboCop (2014),58607007,2014
@@ -1501,7 +1484,6 @@ Assassin's Creed,54647948,2016
 The Omen (2006),54607383,2006
 Crash,54580300,2005
 New Year's Eve,54544638,2011
-"Three Billboards Outside Ebbing, Missouri",54513740,2017
 The Abyss,54461047,1989
 Horrible Bosses 2,54445357,2014
 Tag,54370084,2018
@@ -1531,7 +1513,6 @@ Rookie of the Year,53615089,1993
 Problem Child,53470891,1990
 Beethoven's 2nd,53443066,1993
 Robocop,53424681,1987
-"Yours, Mine and Ours",53412862,2005
 Life as We Know It,53374681,2010
 Tim Burton's Corpse Bride,53359111,2005
 T-Rex: Back to the Cretaceous (IMAX),53354743,1998
@@ -1580,7 +1561,6 @@ The Little Rascals,52125282,1994
 Awakenings,52096475,1990
 Selma,52076908,2014
 The Forbidden Kingdom,52075270,2008
-"South Park - Bigger, Longer and Uncut",52037603,1999
 Predators,52000688,2010
 Tyler Perry's Temptation: Confessions of a Marriage Counselor,51975354,2013
 Amadeus,51973029,1984
@@ -1677,7 +1657,6 @@ Racing Stripes,49772522,2005
 Are We Done Yet?,49662533,2007
 Revenge of the Pink Panther,49579269,1978
 Australia,49554002,2008
-"Planes, Trains and Automobiles",49530280,1987
 Old Dogs,49492060,2009
 Runaway Jury,49443628,2003
 Land of the Lost,49438370,2009
@@ -1763,7 +1742,6 @@ Halloween,47000000,1978
 Silent Hill,46982632,2006
 Final Destination 2,46961214,2003
 Urban Cowboy,46918287,1980
-"See No Evil, Hear No Evil",46908987,1989
 Sicario,46889293,2015
 Red Sparrow,46874505,2018
 How to Be Single,46843513,2016
@@ -1771,7 +1749,6 @@ The Spy Who Loved Me,46838673,1977
 Goodfellas,46836214,1990
 The River Wild,46816343,1994
 Boogeyman,46752382,2005
-"Dude, Where's My Car?",46729800,2000
 Firefox,46708276,1982
 The Rocketeer,46704056,1991
 Practical Magic,46683377,1998
@@ -1788,7 +1765,6 @@ Malice,46405336,1993
 Deep Sea 3D (IMAX),46359702,2006
 Full Metal Jacket,46357676,1987
 Romeo + Juliet,46351345,1996
-"It's a Mad, Mad, Mad, Mad World",46332858,1963
 Blended,46294610,2014
 The Enforcer,46236000,1976
 Black Rain,46212055,1989
@@ -1812,7 +1788,6 @@ D2: The Mighty Ducks,45610410,1994
 The Tigger Movie,45554533,2000
 The Great Wall,45540830,2017
 Jaws 3-D,45517055,1983
-"O Brother, Where Art Thou?",45512588,2000
 Moonrise Kingdom,45512466,2012
 Medicine Man,45500797,1992
 12 Strong,45500164,2018
@@ -1853,7 +1828,6 @@ Lost in Translation,44585453,2003
 The Negotiator,44547681,1998
 Napoleon Dynamite,44540956,2004
 The Odd Couple,44527234,1968
-"McFarland, USA",44482410,2015
 Nothing to Lose,44480039,1997
 Instructions Not Included,44467206,2013
 Up in Smoke,44364244,1978
@@ -1969,7 +1943,6 @@ Homeward Bound: The Incredible Journey,41833324,1993
 Exorcist: The Beginning,41821986,2004
 Aliens Vs. Predator - Requiem,41797066,2007
 The Hills Have Eyes,41778863,2006
-"Oh, God!",41687243,1977
 The Hours,41675994,2002
 Cheech & Chong's Next Movie,41675194,1980
 Ronin,41616262,1998
@@ -2011,7 +1984,6 @@ Revenge of the Nerds,40874452,1984
 The Star,40852824,2017
 House on Haunted Hill,40846082,1999
 Brewster's Millions,40833132,1985
-"Love, Simon",40826341,2018
 Absence of Malice,40716963,1981
 Short Circuit,40697761,1986
 Encino Man,40693477,1992
@@ -2159,7 +2131,6 @@ Seven Years in Tibet,37957682,1997
 It Could Happen to You,37939757,1994
 First Sunday,37931869,2008
 The Brothers Grimm,37916267,2005
-"Big Mommas: Like Father, Like Son",37915414,2011
 Jeepers Creepers,37904175,2001
 The Dead Pool,37903295,1988
 Bedazzled (2000),37886980,2000
@@ -2237,9 +2208,7 @@ Gung Ho,36611610,1986
 Taxi,36611066,2004
 Freedom Writers,36605602,2007
 The 'Burbs,36601993,1989
-"Tarzan, the Ape Man",36565280,1981
 Soapdish,36489888,1991
-"To Wong Foo, Thanks for Everything, Julie Newmar",36474193,1995
 Set It Off,36461139,1996
 Million Dollar Arm,36457627,2014
 Son-in-Law,36448400,1993
@@ -2359,7 +2328,6 @@ Malibu's Most Wanted,34432201,2003
 The Doors,34416893,1991
 Eternal Sunshine of the Spotless Mind,34400301,2004
 The Foreigner,34393507,2017
-"Like Father, Like Son",34377585,1987
 Adventures in Babysitting,34368475,1987
 Inferno,34343574,2016
 Texas Chainsaw 3D,34341945,2013
@@ -2373,7 +2341,6 @@ The Hunted,34244097,2003
 The Reader,34194407,2008
 Magnificent Desolation (IMAX),34137524,2005
 My Dog Skip,34134641,2000
-"Everything, Everything",34121140,2017
 Instinct,34105207,1999
 The Best Man,34102780,1999
 The DUFF,34030343,2015
@@ -2489,7 +2456,6 @@ Nothing in Common,32324557,1986
 What's the Worst That Could Happen?,32269834,2001
 The Age of Innocence,32255440,1993
 Kevin Hart: Let Me Explain,32244051,2013
-"Definitely, Maybe",32241649,2008
 Anacondas: The Hunt for the Blood Orchid,32238923,2004
 The Love Guru,32235793,2008
 The Lost Boys,32222567,1987
@@ -2535,7 +2501,6 @@ The Wedding Date,31726995,2005
 The Soloist,31720158,2009
 Transporter 3,31715062,2008
 Quarantine,31691811,2008
-"History of the World, Part I",31672907,1981
 August Rush,31664162,2007
 For Richer or Poorer,31642995,1997
 Can't Buy Me Love,31623833,1987
@@ -2545,7 +2510,6 @@ One Hour Photo,31597131,2002
 Rob Roy,31596911,1995
 Chappie,31569268,2015
 Little Big Man,31559552,1970
-"Good Night, and Good Luck.",31558003,2005
 Scott Pilgrim vs. the World,31524275,2010
 A History of Violence,31504633,2005
 Random Hearts,31502583,1999
@@ -2612,7 +2576,6 @@ Deliver Us From Evil,30577122,2014
 An American Werewolf in London,30565292,1981
 Sleepwalkers,30524763,1992
 Uncommon Valor,30503151,1983
-"Hail, Caesar!",30498085,2016
 The Lord of the Rings (1978),30471420,1978
 The Champ,30441738,1979
 The Sitter,30441326,2011
@@ -2653,7 +2616,6 @@ Point of No Return,30038362,1993
 Sophie's Choice,30036000,1982
 The Gods Must Be Crazy,30031783,1984
 The Iron Lady,30017992,2011
-"I, Tonya",30014539,2017
 A Nightmare on Elm Street 2: Freddy's Revenge,29999213,1985
 Madeline,29967750,1998
 Neighbors (1981),29916207,1981
@@ -2684,7 +2646,6 @@ Easy Money,29309766,1983
 Shoot to Kill,29300090,1988
 Zathura,29258869,2005
 Romy & Michele's High School Reunion,29235353,1997
-"Fort Apache, The Bronx",29200000,1981
 Chinatown,29200000,1974
 The Object of My Affection,29187243,1998
 The Rose,29174648,1979
@@ -2701,7 +2662,6 @@ Herbie Goes to Monte Carlo,29000000,1977
 Chimpanzee,28972764,2012
 The Watcher,28946615,2000
 James and the Giant Peach,28946127,1996
-"Girl, Interrupted",28912646,1999
 The Dream Team,28890240,1989
 In the Army Now,28881266,1994
 One Direction: This is Us,28873374,2013
@@ -2931,7 +2891,6 @@ Serenity,25514517,2005
 A Nightmare on Elm Street,25504513,1984
 The Fourth Kind,25486040,2009
 Mimic,25480490,1997
-"My Father, the Hero",25479558,1994
 Escape From L.A.,25477365,1996
 Dark Water,25473352,2005
 The International,25450527,2009
@@ -2967,7 +2926,6 @@ Alpha and Omega,25107267,2010
 The Cutting Edge,25105517,1992
 Midnight in the Garden of Good & Evil,25105255,1997
 Problem Child 2,25104700,1991
-"The Good, the Bad and the Ugly",25100000,1967
 In the Name of the Father,25096862,1993
 Winchester,25091816,2018
 Navy Seals,25069101,1990
@@ -2989,12 +2947,10 @@ Quiz Show,24822619,1994
 The Craft,24819936,1996
 Our Idiot Brother,24816118,2011
 Gifted,24801212,2017
-"From Russia, with Love",24796765,1964
 Thank You for Smoking,24793509,2006
 Waking Ned Devine,24792251,1998
 The Man Without a Face,24760338,1993
 Arlington Road,24756177,1999
-"sex, lies and videotape",24741667,1989
 Gorillas in the Mist,24720479,1988
 Lottery Ticket,24719879,2010
 The Sweetest Thing,24718164,2002
@@ -3031,7 +2987,6 @@ Hearts in Atlantis,24185781,2001
 Angel Eyes,24174218,2001
 Iron Eagle,24159872,1986
 Lord of War,24149632,2005
-"Tinker, Tailor, Soldier, Spy",24149393,2011
 Clerks II,24148068,2006
 Dead Presidents,24147179,1995
 An Inconvenient Truth,24146161,2006
@@ -3226,8 +3181,6 @@ Black or White,21571189,2015
 Baggage Claim,21569509,2013
 He Got Game,21567853,1998
 Just Wright,21540363,2010
-"Oh, God! You Devil!",21538850,1984
-"The Way, Way Back",21506546,2013
 The Book Thief,21488481,2013
 Married to the Mob,21486757,1988
 Battlefield Earth,21471685,2000
@@ -3374,7 +3327,6 @@ Appaloosa,20211394,2008
 Another Stakeout,20208496,1993
 Baahubali 2: The Conclusion,20186659,2017
 The Secret in their Eyes (2015),20180155,2015
-"Corrina, Corrina",20164171,1994
 Alpha,20160574,2018
 Dracula (1979),20158970,1979
 Homefront,20158898,2013
@@ -3476,7 +3428,6 @@ The Bad News Bears in Breaking Training,19104350,1977
 Georgia Rule,19103072,2007
 Hart's War,19077641,2002
 Johnny Mnemonic,19075720,1995
-"I, Frankenstein",19075290,2014
 Waitress,19074800,2007
 Remember Me,19068240,2010
 Bugs! (IMAX),19063544,2003
@@ -3573,8 +3524,6 @@ Duck Tales: The Movie,18115724,1990
 Pooh's Heffalump Movie,18098433,2005
 Call Me by Your Name,18095701,2017
 Wes Craven's New Nightmare,18090181,1994
-"Jo Jo Dancer, Your Life is Calling",18034150,1986
-"Everything You Always Wanted to Know About Sex, But Were Afraid to Ask",18016290,1972
 Admission,18007317,2013
 The Aristocats (Re-issue) (1980),18000000,1980
 Herbie Goes Bananas,18000000,1980
@@ -3624,7 +3573,6 @@ Eye of the Needle,17583634,1981
 Deliver Us from Eva,17573594,2003
 The Zookeeper's Wife,17571660,2017
 Take This Job and Shove It,17569027,1981
-"Paul, Apostle of Christ",17560475,2018
 Enough Said,17550872,2013
 Johnny Be Good,17550399,1988
 Invasion U.S.A.,17536256,1985
@@ -3758,7 +3706,6 @@ The Hitcher (2007),16472961,2007
 Monkey Trouble,16453258,1994
 Monkey Kingdom,16432322,2015
 Breaking Away,16424918,1979
-"New York, New York",16400000,1977
 Return from Witch Mountain,16393000,1978
 Elizabeth: The Golden Age,16383509,2007
 The Master,16377274,2012
@@ -3796,7 +3743,6 @@ D.C. Cab,16134627,1983
 Jobs,16131410,2013
 Waiting...,16124543,2005
 Imagine That,16123323,2009
-"Bright Lights, Big City",16118077,1988
 Death Wish 3,16116878,1985
 The Prophecy,16115878,1995
 Fruitvale Station,16101339,2013
@@ -3906,7 +3852,6 @@ Pure Country,15164458,1992
 And So It Goes,15160801,2014
 Flowers in the Attic,15151736,1987
 Arthur and the Invisibles,15132763,2006
-"The Goods: Live Hard, Sell Hard",15122676,2009
 Big Top Pee-Wee,15122324,1988
 Muriel's Wedding,15119639,1995
 Halloween: The Curse of Michael Myers,15116634,1995
@@ -3995,7 +3940,6 @@ The Vanishing,14543394,1993
 To the Arctic (IMAX),14531294,2012
 Everyone's Hero,14523101,2006
 Excess Baggage,14515490,1997
-"Oh, God! Book II",14504277,1980
 Maximum Risk,14502483,1996
 Paint Your Wagon,14500000,1969
 A Fistful of Dollars,14500000,1967
@@ -4004,8 +3948,6 @@ Big Eyes,14482031,2014
 Psycho III,14481606,1986
 In Love and War,14481231,1996
 Welcome to Mooseport,14470947,2004
-"Life, or Something Like It",14448589,2002
-"Hello, My Name is Doris",14444999,2016
 America (2014),14444502,2014
 American Ultra,14440985,2015
 The Edge of Seventeen,14431633,2016
@@ -4247,13 +4189,11 @@ Mr. Nice Guy,12716953,1998
 The New World,12712093,2005
 Carol,12711491,2015
 D.O.A.,12706478,1988
-"Bon Cop, Bad Cop",12665721,2006
 The Spitfire Grill,12658486,1996
 The Bedroom Window,12640385,1987
 Triple 9,12639297,2016
 Battle of the Sexes,12638526,2017
 Everybody's All-American,12638294,1988
-"House of 1,000 Corpses",12634962,2003
 Bad Influence,12626043,1990
 The Legend of the Lone Ranger,12617845,1981
 The Omega Code,12614346,1999
@@ -4328,7 +4268,6 @@ Dreamscape,12145169,1984
 Pink Cadillac,12143484,1989
 Let Me In,12134935,2010
 Roommates,12096881,1995
-"Bye Bye, Love",12096673,1995
 Foxcatcher,12096300,2014
 Hellbound: Hellraiser II,12090735,1988
 Soul Men,12082391,2008
@@ -4352,7 +4291,6 @@ Zoom,11989328,2006
 Phantasm,11988469,1979
 End of the Spear,11967000,2006
 Sorority Row,11965282,2009
-"Roman J. Israel, Esq.",11962778,2017
 Brighton Beach Memoirs,11957943,1986
 Firewalker,11949484,1986
 Deathstalker,11919250,1983
@@ -4454,10 +4392,8 @@ Bobby,11242801,2006
 Jane Eyre,11242660,2011
 Island of Lemurs: Madagascar (IMAX),11242362,2014
 The Smurfs and the Magic Flute,11234220,1983
-"The Adventures of Priscilla, Queen of the Desert",11220670,1994
 Q & A,11207891,1990
 Deep Rising,11203026,1998
-"Be Kind, Rewind",11175164,2008
 For Love or Money,11146270,1993
 Return to Oz,11137801,1985
 Three Identical Strangers,11136936,2018
@@ -4486,7 +4422,6 @@ The Young Victoria,11001272,2009
 The Super,11000863,1991
 The Mirror Crack'd,11000000,1980
 The Last Flight of Noah's Ark,11000000,1980
-"Give 'Em Hell, Harry!",11000000,1975
 Hang 'em High,11000000,1968
 Adrenaline Rush: The Science of Risk (IMAX),10994028,2002
 Who's Harry Crumb?,10982364,1989
@@ -4680,7 +4615,6 @@ Jade,9851610,1995
 La Grande Seduction,9844180,2003
 3 Strikes,9832166,2000
 Hanky Panky,9823934,1982
-"He Said, She Said",9804775,1991
 Bad Dreams,9797098,1988
 The Express,9793406,2008
 The Swan Princess,9771658,1994
@@ -4801,7 +4735,6 @@ The Next Karate Kid,8914777,1994
 Late for Dinner,8906823,1991
 The Formula,8894289,1980
 Salsa - The Motion Picture,8892589,1988
-"Mystery, Alaska",8891623,1999
 Battle of the Year,8888355,2013
 The Inkwell,8880705,1994
 White Fang II: Myth of the White Wolf,8878839,1994
@@ -4907,7 +4840,6 @@ The Promise (2017),8224288,2017
 Sidney Sheldon's Bloodline,8218695,1979
 Blue Steel,8217997,1990
 Black Robe,8211952,1991
-"Whose Life Is It, Anyway?",8206145,1981
 Lucas,8200000,1986
 Cadillac Records,8195551,2008
 Bajrangi Bhaijaan,8178001,2015
@@ -4988,14 +4920,12 @@ The Best of Times,7790931,1986
 If Looks Could Kill,7788597,1991
 Bad Words,7779614,2014
 Sirens,7770731,1994
-"Enemies, A Love Story",7754571,1989
 Loving ,7751969,2016
 The Return,7749851,2006
 The Beast Within,7742572,1982
 Being Julia,7739049,2004
 Unsane,7732899,2018
 Surviving the Game,7727256,1994
-"The Cook, The Thief, His Wife and Her Lover",7724701,1990
 Disorganized Crime,7723506,1989
 A New Life,7721852,1988
 Expelled: No Intelligence Allowed,7720487,2008
@@ -5173,7 +5103,6 @@ Willard,6886089,2003
 Redline,6881022,2007
 Thunderbirds,6880917,2004
 Death Wish 4: The Crackdown,6880310,1987
-"Woman, Thou Art Loosed",6879730,2004
 The Brothers Grimsby,6874837,2016
 Cedar Rapids,6861102,2011
 Never Talk to Strangers,6858261,1995
@@ -5197,7 +5126,6 @@ Ladies in Lavender,6765081,2005
 Me and Earl and the Dying Girl,6758416,2015
 Caught Up,6754958,1998
 The Young Black Stallion (IMAX),6751389,2003
-"Seraphin, un homme et son peche",6749187,2002
 Smoke Signals,6745362,1998
 The Mambo Kings,6742168,1992
 Amour,6739492,2012
@@ -5311,7 +5239,6 @@ Mambo Italiano (Canada),6253026,2003
 Firstborn,6250994,1984
 Widows' Peak,6243722,1994
 Ghost World,6217849,2001
-"Oh, Heavenly Dog!",6216067,1980
 Topsy-Turvy,6208548,1999
 Believe,6206566,2013
 The Straight Story,6203044,1999
@@ -5480,12 +5407,10 @@ Cuba,5610280,1979
 Indochine,5603158,1992
 Death of a Nation,5597563,2018
 Central Station,5596708,1998
-"Elvira, Mistress of the Dark",5596267,1988
 Islands in the Stream,5596173,1977
 Iris,5594617,2001
 Paradise,5588800,1982
 Loose Cannons,5585154,1990
-"Europa, Europa",5575738,1991
 Cesar Chavez,5571497,2014
 Gridlock'd,5571205,1997
 A Night in Heaven,5563663,1983
@@ -5631,7 +5556,6 @@ Surf Ninjas,4916135,1993
 Hilary and Jackie,4912892,1998
 The Playboys,4906900,1992
 The Virgin Suicides,4906229,2000
-"Paris, je t'aime",4899278,2007
 The Lover,4899194,1992
 Players,4896094,1979
 The Magdalene Sisters,4890878,2003
@@ -5670,7 +5594,6 @@ The Good Mother,4764606,1988
 A Walk on the Moon,4750660,1999
 In the Cut,4750602,2003
 Violets Are Blue,4743287,1986
-"Grandview, USA",4743119,1984
 Duets,4739023,2000
 This Is Spinal Tap,4736202,1984
 Drugstore Cowboy,4729352,1989
@@ -5691,7 +5614,6 @@ True Identity,4693236,1991
 National Lampoon's Senior Trip,4686937,1995
 Avenging Force,4679650,1986
 The Science of Sleep,4670644,2006
-"No Retreat, No Surrender",4662137,1986
 C.H.U.D.,4654423,1984
 The Hitman,4654288,1991
 Radio Flyer,4651977,1992
@@ -5706,7 +5628,6 @@ Little Voice,4611784,1998
 The January Man,4611062,1989
 Longtime Companion,4609953,1990
 Love in the Time of Cholera,4607608,2007
-"Lust, Caution",4604982,2007
 Dutch,4603929,1991
 Les Boys,4602341,1997
 Eliminators,4601256,1986
@@ -5730,7 +5651,6 @@ Dangerous Beauty,4553271,1998
 Death Before Dishonor,4546244,1987
 Italian for Beginners,4544753,2002
 Miss March,4543320,2009
-"Au Revoir, Les Enfants",4542825,1988
 Talk to Me,4533261,2007
 Mediterraneo,4532791,1992
 McHale's Navy,4529843,1997
@@ -5760,7 +5680,6 @@ Beyond Borders,4430101,2003
 Ed,4422380,1996
 The Adventures of Pluto Nash,4420080,2002
 The Conversation,4420000,1974
-"Food, Inc.",4417674,2009
 Don't Think Twice,4417667,2016
 Wagons East!,4412297,1994
 Run,4409328,1991
@@ -5805,14 +5724,12 @@ Listen to Me,4299023,1989
 Goal! The Dream Begins,4283255,2006
 Best Seller,4278150,1987
 Glitter,4274407,2001
-"Jeff, Who Lives at Home",4269426,2012
 The Meddler,4267218,2016
 Ae Dil Hai Mushkil,4264983,2016
 Lambada,4263112,1990
 Four Rooms,4257354,1995
 45 Years,4247285,2015
 Men with Brooms,4245870,2002
-"Kiss Kiss, Bang Bang",4243756,2005
 Before Night Falls,4242892,2000
 Until September,4239154,1984
 The Lunchbox,4235151,2014
@@ -5875,7 +5792,6 @@ The Dinner Game,4071548,1999
 Frances Ha,4069826,2013
 The Gospel of John,4069090,2003
 Tank Girl,4064495,1995
-"Good Bye, Lenin!",4064200,2004
 Secretary,4059680,2002
 Gloria,4059673,1980
 Peter's Friends,4058564,1992
@@ -5899,7 +5815,6 @@ Kagemusha,4000000,1980
 American Ninja 2,4000000,1987
 P2,3995018,2007
 Young@Heart,3992189,2008
-"Welcome Home, Roxy Carmichael",3989297,1990
 Fluke,3987768,1995
 Sleight,3986245,2017
 The Pebble and the Penguin,3983912,1995
@@ -5983,7 +5898,6 @@ The Cold Light of Day,3763583,2012
 Anomalisa,3759286,2015
 Friend Request,3759078,2017
 Imagine: John Lennon,3753977,1988
-"Lock, Stock and Two Smoking Barrels",3753929,1999
 Mannequin Two: On the Move,3752428,1991
 Allan Quatermain and the Lost City of Gold,3751699,1987
 A Monster Calls,3740823,2016
@@ -6102,7 +6016,6 @@ Angels and Insects,3414301,1996
 Gunmen,3411885,1994
 Indignation,3401155,2016
 Everybody Wants Some!!,3400278,2016
-"Next Stop, Wonderland",3395581,1998
 Like Crazy,3395391,2011
 Head Office,3393807,1986
 The Matchmaker,3392080,1997
@@ -6163,7 +6076,6 @@ Catfish,3237343,2010
 Sing Street,3237118,2016
 The Mermaid (Mei ren yu),3232685,2016
 The Leisure Seeker,3226443,2017
-"Race for Your Life, Charlie Brown",3223888,1977
 Lost and Found (1979),3223197,1979
 Barfly,3221568,1987
 Pi,3221152,1998
@@ -6187,7 +6099,6 @@ The Big Kahuna,3165544,2000
 Beautiful,3157348,2000
 Our Kind of Traitor,3153157,2016
 Clerks,3151130,1994
-"Steal Big, Steal Little",3150170,1995
 Two Lovers,3149034,2009
 Naked Cage,3136701,1986
 The Favor,3134381,1994
@@ -6219,7 +6130,6 @@ Celeste and Jesse Forever,3094813,2012
 The Ex,3093394,2007
 Paid in Full,3090862,2002
 Tous les Matins du Monde,3089497,1992
-"Synecdoche, New York",3083538,2008
 The Fan (1981),3082096,1981
 Speed Zone,3077361,1989
 Dominick and Eugene,3076031,1988
@@ -6279,7 +6189,6 @@ Gracie,2956339,2007
 A.X.L.,2939356,2018
 Veer Zaara,2938532,2004
 Metropolitan,2938208,1990
-"Careful, He Might Hear You",2938179,1984
 Up at the Villa,2933161,2000
 Joan Rivers: A Piece of Work,2930687,2010
 The Beatles: Eight Days a Week - The Touring Years,2930414,2016
@@ -6349,7 +6258,6 @@ Hexed,2786807,1993
 Kirk Cameron's Saving Christmas,2783970,2014
 Bugsy Malone,2783840,1976
 La Boda de Valentina,2783739,2018
-"Ma Fille, Mon Ange",2779545,2007
 How to Lose Friends and Alienate People,2778752,2008
 Gleaming the Cube,2777280,1989
 Impulse,2773433,1984
@@ -6389,7 +6297,6 @@ Hello Mary Lou: Prom Night II,2683519,1987
 Magic in the Water,2680717,1995
 Ip Man 3,2679437,2016
 Junebug,2678691,2005
-"After Dark, My Sweet",2678414,1990
 Samsara,2672413,2012
 Playing for Keeps (1986),2669366,1986
 He Named Me Malala,2668936,2015
@@ -6472,7 +6379,6 @@ P.O.W. - The Escape,2497233,1986
 Rumble Fish,2494480,1983
 Desert Hearts,2492088,1986
 The Stupids,2491989,1996
-"Silent Night, Deadly Night",2491460,1984
 Choose Me,2490233,1984
 The Stepfather,2488740,1987
 Himalaya,2487878,2001
@@ -6494,7 +6400,6 @@ The Hand,2447576,1981
 The Man Who Wasn't There (1983),2443487,1983
 Table for Five,2439705,1983
 Le Secret de Me Mere,2438422,2006
-"Hey There, It's Yogi Bear (re-issue)",2438233,1986
 Son of the Pink Panther,2438031,1993
 THX 1138,2437000,1971
 Pawn Sacrifice,2436633,2015
@@ -6538,7 +6443,6 @@ In the Loop,2388804,2009
 I'm In Love With a Church Girl,2387730,2013
 Twilight/New Moon Combo (one-night-only),2385237,2010
 The Basketball Diaries,2381087,1995
-"Spring, Summer, Fall, Winter... and Spring",2380788,2004
 Hearts Beat Loud,2380133,2018
 The Rider,2378516,2018
 Warren Miller's Journey (IMAX),2377609,2003
@@ -6565,10 +6469,8 @@ Trance,2328743,2013
 A World Apart,2326860,1988
 Weeds,2325444,1987
 East-West,2321029,2000
-"White Hunter, Black Heart",2319124,1990
 Chocolat (1989),2317091,1989
 Shanghai Surprise,2315683,1986
-"Man, Woman and Child",2314561,1983
 A Aa,2313043,2016
 Shadow Conspiracy,2312463,1997
 WARx2,2310625,2015
@@ -6596,7 +6498,6 @@ The Nasty Girl,2281569,1990
 Noises Off,2280148,1992
 Collide,2280004,2017
 A Brief History of Time,2279692,1992
-"Yes, Giorgio",2279543,1982
 Nomads,2278264,1986
 Adam,2277396,2009
 Escanaba in 'da Moonlight,2276602,2001
@@ -6649,7 +6550,6 @@ Electric Dreams,2193612,1984
 Krrish 3,2191534,2013
 Russkies,2189047,1987
 Jem and the Holograms,2184640,2015
-"Paris, Texas",2181987,1984
 Bird,2181286,1988
 Chinese Box,2178160,1998
 Dance with a Stranger,2174622,1985
@@ -6741,7 +6641,6 @@ We Don't Live Here Anymore,2041014,2004
 El Mariachi,2040920,1993
 Wildfire: Feel the Heat (IMAX),2040635,1999
 Crash (1996),2038450,1996
-"I Love You, Phillip Morris",2037459,2010
 Novocaine,2036682,2001
 Mom and Dad Save the World,2034470,1992
 Gate II,2032973,1992
@@ -6804,7 +6703,6 @@ Nate and Hayes,1963756,1983
 Akira Kurosawa's Dreams,1963207,1990
 High Art,1960216,1998
 Margot at the Wedding,1959420,2007
-"Happy, Texas",1955933,1999
 The Clan of the Cave Bear,1953732,1986
 Cake,1951776,2015
 Vertical Reality,1951429,1994
@@ -6853,7 +6751,6 @@ Legend,1872994,2015
 Harrison's Flowers,1871025,2002
 Cookie,1869417,1989
 The Kiss,1869148,1988
-"Baby, It's You",1867792,1983
 A Quiet Passion,1865396,2017
 Bitter Moon,1862805,1994
 English Vinglish,1862086,2012
@@ -6969,7 +6866,6 @@ Life & Times of Hank Greenberg,1712385,2000
 Everything Is Illuminated,1712337,2005
 Steel,1710972,1997
 High Heels,1710057,1991
-"To Joey, with Love",1709073,2016
 Even Cowgirls Get the Blues,1708873,1994
 The Girl on the Bridge,1708839,2000
 Sweet Land,1706325,2006
@@ -7051,7 +6947,6 @@ Chasers,1596687,1994
 A Ghost Story,1596371,2017
 Sex and Lucia,1594779,2002
 I Am,1591034,2011
-"New York, I Love You",1588015,2009
 Nicholas Nickleby,1587173,2002
 Neerja,1585687,2016
 Citizen Kane,1585634,1941
@@ -7077,7 +6972,6 @@ A Handful of Dust,1560700,1988
 Persecuted,1558836,2014
 Zebrahead,1557771,1992
 Ararat,1555959,2002
-"Truly, Madly, Deeply",1554742,1991
 Bless Me Ultima,1553826,2013
 Beautiful Thing,1548120,1996
 The Haunting of Morella,1547867,1990
@@ -7109,7 +7003,6 @@ Stepfather 2,1519796,1989
 Being Human,1519366,1994
 Kon-Tiki,1517410,2013
 Life Is Sweet,1516414,1991
-"I, the Jury",1515578,1982
 The Double Hour,1514942,2011
 Finding Vivian Maier,1514782,2014
 Raajneeti,1514558,2010
@@ -7167,7 +7060,6 @@ Why We Fight,1439972,2006
 The Kid Stays in the Picture,1439232,2002
 Disconnect,1436900,2013
 Love at Large,1436308,1990
-"Two Days, One Night",1436243,2014
 Down by Law,1435668,1986
 The Man from Elysian Fields,1435016,2002
 Monica la mitraille,1435015,2004
@@ -7248,7 +7140,6 @@ City of Hope,1345015,1991
 The Salt of the Earth,1343349,2015
 Gas Food Lodging,1342613,1992
 Dear Frankie,1341332,2005
-"No Eres Tu, Soy Yo",1339911,2011
 A Dirty Shame,1339668,2004
 The Little Prince,1339152,2016
 Henry Fool,1338335,1998
@@ -7353,7 +7244,6 @@ Tristram Shandy: A Cock and Bull Story,1253413,2006
 The Best Intentions,1253106,1992
 The Seagull,1252960,2018
 Gonzo,1252100,2008
-"For a Good Time, Call... ",1251749,2012
 An Interview with God,1251044,2018
 The Singles Ward,1250798,2002
 Kickboxer 2,1250712,1991
@@ -7373,7 +7263,6 @@ Take This Waltz,1239692,2012
 Bubba Ho-Tep,1239183,2003
 Picture Bride,1238905,1995
 Nuit de noces,1238180,2001
-"Car 54, Where Are You?",1238080,1994
 Slow Burn,1237615,2007
 White,1237219,1994
 Anna (1987),1236848,1987
@@ -7420,12 +7309,10 @@ Inequality for All,1205273,2013
 Equilibrium,1203794,2002
 The Women's Balcony,1200885,2017
 Veteran,1200627,2015
-"Beats, Rhymes & Life: The Travels of a Tribe Called Quest",1200326,2011
 Flawless (2008),1200234,2008
 District B13,1200216,2006
 Headhunters,1200010,2012
 Met Opera: Semiramide,1200000,2018
-"4 Months, 3 Weeks, 2 Days",1198208,2008
 Sammy and Rosie Get Laid,1196336,1987
 Cool as Ice,1193062,1991
 High Hopes,1192322,1989
@@ -7480,7 +7367,6 @@ Where Hope Grows,1156000,2015
 Ek Main Aur Ekk Tu,1155545,2012
 The Good Wife,1155020,1986
 Step (2017),1154982,2017
-"Olivier, Olivier",1154476,1993
 Get Real,1152979,1999
 The Wrong Guys,1152786,1988
 Excessive Force,1152117,1993
@@ -7496,7 +7382,6 @@ Belizaire the Cajun,1142243,1986
 Two Much,1141556,1996
 L.I.E.,1138836,2001
 Yi Yi (A One and a Two),1136776,2000
-"Yoo-Hoo, Mrs. Goldberg",1134623,2009
 In the Shadow of the Moon,1134358,2007
 Golmaal 3,1132192,2010
 Valmont,1132112,1989
@@ -7540,7 +7425,6 @@ The U.S. Vs. John Lennon,1109146,2006
 Heathers,1108462,1989
 Daddy Nostalgia,1108429,1991
 Sacred Planet (IMAX),1108356,2004
-"Say Amen, Somebody",1108299,1983
 Where the Heart Is (1990),1106475,1990
 Viceroy's House,1105717,2017
 The Battleship Island,1104957,2017
@@ -7668,7 +7552,6 @@ Hard Candy,1024640,2006
 Attack the Block,1024175,2011
 The Beat That My Heart Skipped,1023424,2005
 Operation Chromite,1023348,2016
-"The Bread, My Sweet",1023156,2001
 All Over the Guy,1022324,2001
 Third Person,1021398,2014
 5 Flights Up,1020921,2015
@@ -7698,7 +7581,6 @@ The 24th Tournee of Animation,1012881,1993
 No Man's Land,1012153,2001
 The Piano Teacher,1012069,2002
 Owning Mahowny,1011871,2003
-"He Loves Me, He Loves Me Not",1011102,2003
 Xiu Xiu: The Sent Down Girl,1010933,1999
 Raid (2018),1010385,2018
 Paris,1010194,2009
@@ -7742,7 +7624,6 @@ Campus Man,989528,1987
 Million Dollar Mystery,989033,1987
 Gett: The Trial of Viviane Amsalem,988150,2015
 Rockstar (2011),986697,2011
-"Twin Falls, Idaho",985341,1999
 Baar Baar Dekho,981947,2016
 The Protector (1985),981817,1985
 Talking Dirty After Dark,978775,1991
@@ -7864,7 +7745,6 @@ Frantz,880883,2017
 Journey to the West: The Demons Strike Back,880346,2017
 Delhi 6,879913,2009
 The Battle of Algiers,879794,1967
-"Fast, Cheap and Out of Control",878960,1997
 The Castle,877621,1999
 The Hit,876775,1985
 After Dark's Horrorfest 2,874635,2007
@@ -7922,7 +7802,6 @@ Like Arrows,843885,2018
 One-Trick Pony,843215,1980
 Higher Ground,841733,2011
 Street Knight,841015,1993
-"Come Back to the Five and Dime, Jimmy Dean, Jimmy Dean",840958,1982
 Illuminata,840134,1999
 Joseph Andrews,839865,1977
 Ex-File 3 (Qian Ren 3),838959,2017
@@ -7958,7 +7837,6 @@ Charly,814666,2002
 The Sea Beast,814000,1926
 Dishoom,812737,2016
 Personal Velocity,811299,2002
-"Faraway, So Close!",810455,1993
 Life Itself,810454,2014
 The Boys Are Back,809752,2009
 Bill W.,809590,2012
@@ -7970,7 +7848,6 @@ Wild Reeds,807775,1995
 The Year My Parents Went on Vacation,807117,2008
 C'est La Vie,805472,1990
 The Ballad of Gregorio Cortez,804963,1983
-"Those Lips, Those Eyes",804713,1980
 13 Assassins,802778,2011
 Parineeta,802758,2005
 The Tillman Story,802535,2010
@@ -8045,7 +7922,6 @@ A Small Circle of Friends,766760,1980
 The Sum of Us,766464,1995
 The Statement,765637,2003
 Strapless,764794,1990
-"Bodies, Rest and Motion",764724,1993
 The Salton Sea,764554,2002
 Before the Rain,763847,1995
 Cosmopolis,763556,2012
@@ -8083,7 +7959,6 @@ On the Road,744296,2012
 Saturday's Warrior,744046,2016
 Ask the Dust,743847,2006
 Seymour: An Introduction,743541,2015
-"Sister, Sister",743445,1988
 Party Monster,742898,2003
 The Edge of Heaven,742349,2008
 Warner Bros. 75th Anniversary Film Festival,741855,1998
@@ -8122,7 +7997,6 @@ The Wicked Lady,724912,1983
 Yves Saint Laurent,723593,2014
 Metropolis (2002),722932,2002
 Bluff Master,722847,2005
-"Little Indian, Big City",722182,1996
 The Big One,720074,1998
 The Women on the 6th Floor,719823,2011
 Forever Strong,719556,2008
@@ -8157,7 +8031,6 @@ The 11th Hour,707343,2007
 Holiday (2014),706893,2014
 Frankie & Alice,706546,2011
 Monster Hunt 2,706153,2018
-"Men, Women & Children",705908,2014
 Human Nature,705308,2002
 Cartel Land,704352,2015
 Canelo Vs. GGG: Supremacy,703396,2017
@@ -8195,7 +8068,6 @@ The Opposite Sex and How to Live With Them,690966,1993
 Shubh Mangal Saavdhan,689874,2017
 Fanboys,688529,2009
 Happy Accidents,688523,2001
-"Distant Voices, Still Lives",688329,1989
 Daniel,687475,1983
 Lady Chatterley,687414,2007
 The Caveman's Valentine,687194,2001
@@ -8206,7 +8078,6 @@ The Thieves,685839,2012
 Mr. Church,685780,2016
 Bloodsport 2,684351,1996
 Nobody Knows,684118,2005
-"A Man, a Woman and a Bank",683353,1979
 Sophie Scholl - The Final Days,680331,2006
 A Matter of Faith,680113,2014
 Besharam,679866,2013
@@ -8214,7 +8085,6 @@ No Entry,678000,2005
 The King of Kong: A Fistful of Quarters,677914,2007
 Alex Rider: Operation Stormbreaker,677646,2006
 The Secret of Kells,676775,2010
-"Dancer, Texas Pop. 81",676631,1998
 Where the River Runs Black,676166,1986
 Mid-August Lunch,675299,2010
 Laaga Chunari Mein Daag - Journey of a Woman,675102,2007
@@ -8225,7 +8095,6 @@ CSA: The Confederate States of America,672156,2005
 Some Mother's Son,671437,1996
 Maniac Cop,671382,1988
 Koi... Mil Gaya,671372,2003
-"Cry, the Beloved Country",670727,1995
 Student of the Year,670086,2012
 Bewaafa,670076,2005
 The Promise,669625,2006
@@ -8304,7 +8173,6 @@ Grey Owl,632617,1999
 The Assassin,632542,2015
 Embrace: The Documentary,629126,2016
 Pumping Iron 2: The Women,628050,1985
-"The Prize Winner of Defiance, Ohio",627844,2005
 Amreeka,627436,2009
 Red Cliff,627047,2009
 Taxi 2,626164,2000
@@ -8315,7 +8183,6 @@ Wuthering Heights (Re-issue),624643,1989
 The Only Living Boy in New York,624332,2017
 Character,623983,1998
 A Secret,623558,2008
-"Kumiko, The Treasure Hunter",623383,2015
 Texas Rangers (2001),623374,2001
 Spike of Bensonhurst,623112,1988
 It's My Party,622503,1996
@@ -8382,7 +8249,6 @@ Where the Rivers Flow North,595505,1994
 Schultze Gets the Blues,595071,2005
 Blue Like Jazz,595018,2012
 Les Rivieres Pourpres (The Crimson Rivers),594966,2001
-"Lo and Behold, Reveries of the Connected World",594912,2016
 Battle of Memories,594552,2017
 Not One Less,592586,2000
 La Promesse,592543,1997
@@ -8390,7 +8256,6 @@ Tarnation,592014,2004
 Night of the Creeps,591366,1986
 Last Night (1999),591165,1999
 The Third Miracle,591142,1999
-"Peace, Love and Misunderstanding",590700,2012
 Refugee,590000,2000
 Prefontaine,589304,1997
 Powaqqatsi,589244,1988
@@ -8415,7 +8280,6 @@ The Pope Must Die(t),582510,1991
 All Good Things,582024,2010
 Lootera,581813,2013
 The Island (2018),581544,2018
-"War, Inc.",580862,2008
 Novitiate,580346,2017
 The Search for Signs of Intelligent Life in the Universe,579854,1991
 Viva Pedro! (Almodovar festival),579539,2006
@@ -8548,7 +8412,6 @@ Our Little Sister (Canadian),531996,2015
 Standing Ovation,531806,2010
 Mademoiselle Chambon,531685,2010
 Sex Is...,530833,1993
-"Sex, Drugs, Rock and Roll",530392,1991
 Things to Do in Denver When You're Dead,529766,1995
 Highway (2014),529136,2014
 Fitoor,528799,2016
@@ -8575,7 +8438,6 @@ Trouble the Water,520151,2008
 Man on Fire (1987),519596,1987
 Fairy Tail: Dragon Cry,519461,2017
 Death of a President,519086,2006
-"Thelonious Monk: Straight, No Chaser",518918,1989
 Tetro,518522,2009
 Scatter My Ashes at Bergdorf's,518342,2013
 Even the Rain,518017,2011
@@ -8693,7 +8555,6 @@ About Elly,470760,2015
 JCVD,470691,2008
 Kelly,469777,1981
 A Midwinter's Tale,469571,1996
-"Maybe, Maybe Not",468930,1996
 Steamboy,468867,2005
 Joe Gould's Secret,468684,2000
 DCI 2017 Tour Premeire,467817,2017
@@ -8746,7 +8607,6 @@ Brother,450594,2001
 Danzon,450501,1992
 Bitter Sugar,450060,1996
 The Damned United,449865,2009
-"The Wonderful, Horrible Life of Leni Riefenstahl",449707,1994
 Attack on Titan: Part 1,449523,2015
 Lockdown,449482,2003
 The Third Man (2015 re-release),449191,2015
@@ -8772,7 +8632,6 @@ Nadja,443169,1995
 Gypsy Caravan,442936,2007
 The Beautiful Country,442813,2005
 Especially on Sunday,442676,1993
-"'Night, Mother",441863,1986
 The Town Is Quiet,441664,2001
 Morons from Outer Space,441137,1985
 Don't Come Knocking,440793,2006
@@ -8834,7 +8693,6 @@ Aloha Summer,418379,1988
 Seraphim Falls,418296,2007
 The Witness (Wo shi zheng ren),418063,2015
 How to Get Ahead in Advertising,418053,1989
-"My Son, the Fanatic",417683,1999
 In the Realms of the Unreal,417120,2004
 Interview,416951,2007
 The Believer,416925,2002
@@ -8868,7 +8726,6 @@ Triumph of the Spirit,408839,1989
 The Promotion,408709,2008
 The 5th Quarter,408159,2011
 Sound of My Voice,408015,2012
-"Love, Kennedy",407871,2017
 Journey to Shiloh,407500,1968
 Humpday,407377,2009
 Slamdance,406881,1987
@@ -8905,7 +8762,6 @@ Head in the Clouds,398278,2004
 Transylmania,397641,2009
 Four Days in September,397517,1998
 Swept from the Sea,397020,1998
-"Still, We Believe: The Boston Red Sox Movie",396803,2004
 Yes,396760,2005
 The Adjuster,396573,1992
 Ain't Them Bodies Saints,396519,2013
@@ -8940,7 +8796,6 @@ Where in the World Is Osama Bin Laden?,384955,2008
 Steam: Turkish Bath,384793,1998
 Rifftrax: Samurai Cop,384756,2017
 Dirty Wars,384473,2013
-"Scotland, PA",384098,2002
 American Heart,384048,1993
 Copying Beethoven,384029,2006
 Boston: An American Running Story,383868,2017
@@ -9069,7 +8924,6 @@ Lumumba,352296,2001
 Long Strange Trip - The Untold Story of The Grateful Dead,351957,2017
 Happy Bhaag Jayegi,351840,2016
 Weekend Warriors,351623,1986
-"Black Cat, White Cat",351447,1999
 Everybody Wants to Be Italian,351416,2008
 Kitchen Stories,351235,2004
 Tokyo!,351059,2009
@@ -9102,7 +8956,6 @@ I Think I Do,345478,1998
 La Cage aux Folles 3,345280,1986
 Kaal,345091,2005
 American Adobo,344992,2002
-"Juliet, Naked",344602,2018
 It Takes Two (1988),344375,1988
 Windy City,343890,1984
 The United States of Leland,343847,2004
@@ -9150,7 +9003,6 @@ Diana,335359,2013
 The 2006 Academy Award Nominated Short Films,335090,2007
 Frankenstein Unbound,334748,1990
 Chup Chup Ke,334618,2006
-"Like Father, Like Son (2014)",334616,2014
 The Devil and Daniel Johnston,334450,2006
 Welcome to Sarajevo,334319,1997
 Monument Ave.,333760,1998
@@ -9262,7 +9114,6 @@ Dark Days,309648,2000
 The Panama Deception,309596,1992
 Adam & Steve,309404,2006
 Love (2012),309200,2012
-"Bigger, Stronger, Faster*",308575,2008
 Masti,308566,2004
 Pumpkin,308552,2002
 The Slingshot,308368,1994
@@ -9300,7 +9151,6 @@ White Material,304020,2010
 In the Land of Blood and Honey,303877,2011
 The Chocolate War,303624,1988
 NH10,303587,2015
-"OSS 117: Cairo, Nest of Spies",303543,2008
 The Life Before Her Eyes,303439,2008
 Mood Indigo,303187,2014
 Holy Rollers,303064,2010
@@ -9421,7 +9271,6 @@ Twice Upon a Yesterday,279757,1999
 Blancanieves,279735,2013
 American Hardcore,279665,2006
 Equinox,279627,1993
-"20,000 Days on Earth",279558,2014
 Christmas in the Clouds,279225,2005
 Wrestling Ernest Hemingway,278720,1993
 Every Time We Say Goodbye,278623,1986
@@ -9481,7 +9330,6 @@ Surfwise,269994,2008
 Kingsglaive: Final Fantasy: XV,269980,2016
 Stalker (2017 re-release),269881,2017
 American Dream,269823,1992
-"Lucia, Lucia",269586,2003
 Foxfire,269300,1996
 My Golden Days,269144,2016
 King of California,268461,2007
@@ -9524,7 +9372,6 @@ Steep,260586,2007
 Under Suspicion,260562,2000
 Stone Reader,260523,2003
 Hitchcock/Truffaut,260430,2015
-"I, Daniel Blake",260354,2017
 An Awfully Big Adventure,259724,1995
 The Wind Will Carry Us,259510,2000
 Chattahoochee,259486,1990
@@ -9558,7 +9405,6 @@ Boy (2012),256211,2012
 Greendale,255947,2004
 Old Joy,255923,2006
 My Brother Is an Only Child,255620,2008
-"Life, Animated",255388,2016
 The Yes Men,255364,2004
 Passione,255355,2011
 Sex with Strangers,254852,2002
@@ -9624,7 +9470,6 @@ Frozen (2010),246176,2010
 Keep the Lights On,246112,2012
 Watermarks,246094,2005
 When You're Strange,246078,2010
-"Larger than Life in 3D: Dave Matthews Band, Ben Harper and Gogol Bordello",246042,2009
 Stepping Out,246000,1991
 Dhoom,245756,2004
 The New Age,245217,1994
@@ -9725,9 +9570,7 @@ High Heels and Low Lifes,228194,2001
 Jeremiah Tower,228153,2017
 A Royal Night Out,228136,2015
 InAPPropriate Comedy,228004,2013
-"Remember Me, My Love",227986,2004
 Insomnia (1998),227569,1998
-"Babar, King of Elephants",227374,1999
 Guiana 1838,227241,2004
 Bellman and True,226944,1988
 This So-Called Disaster,226658,2004
@@ -9809,7 +9652,6 @@ The Designated Mourner,215292,1997
 Call + Response,215185,2008
 Neil Young Journeys,215026,2012
 First Snow,214864,2007
-"Niagara, Niagara",214661,1998
 Hote Hote Pyar Ho Gaya,214574,1999
 Trade,214307,2007
 The Year My Voice Broke,213901,1988
@@ -9893,7 +9735,6 @@ God's Army 2: States of Grace,203144,2005
 Ghanchakkar,203044,2013
 Keep the Change,202788,2018
 Angel-A,202647,2007
-"Filth to Ashes, Flesh to Dust",202531,2011
 The Girl in the Picture,202428,1986
 Crystal Fairy,202370,2013
 Jinn,202348,2014
@@ -9972,7 +9813,6 @@ The Indian Runner,191125,1991
 For Queen and Country,191051,1989
 On a Clear Day,191033,2006
 The Connection,190980,2015
-"A Woman, A Gun and A Noodle Shop",190946,2010
 Lost Embrace,190860,2005
 A Pure Formality,190749,1995
 Digimon Adventure tri.,190581,2016
@@ -10012,10 +9852,8 @@ Lilya 4Ever,184023,2003
 The Other Side of Hope,183943,2017
 Twelve,183920,2010
 Jig,183790,2011
-"Good Morning, Babylon",183700,1987
 La Forteresse suspendue,183579,2001
 Summer 1993,183570,2018
-"The Man Nobody Knew: In Search of My Father, CIA Spymaster William Colby",183342,2011
 Lambert & Stamp,183320,2015
 The Girl from Paris,183266,2003
 Burnt Money (Plata Quemada),183132,2001
@@ -10270,7 +10108,6 @@ Red Road,154892,2007
 Sister (2012),154659,2012
 Hansel and Gretel,154642,2002
 Magic Trip,154521,2011
-"Buen Dia, Ramon",154356,2015
 Unforgivable,154189,2012
 Lonesome Jim,154187,2006
 A Touch of Sin,154120,2013
@@ -10293,7 +10130,6 @@ Le Quattro Volte,152530,2011
 Ladybird Ladybird,152457,1994
 Once Upon a Time in Anatolia,152408,2012
 Pushing Hands,152322,1995
-"Hare Krishna! The Mantra, the Movement and the Swami Who Started it All",152284,2017
 Snake and Mongoose,152200,2013
 Les Rivieres Pourpres 2 (Crimson Rivers 2),152148,2004
 The Unknown Woman,152114,2008
@@ -10488,7 +10324,6 @@ Private Fears in Public Places,134636,2007
 Concert for George,134600,2003
 Cop Car,134552,2015
 A Perfect Candidate,134485,1996
-"Life, Above All",134461,2011
 The Saint of Fort Washington,134454,1993
 Skate Kitchen,134437,2018
 Fists of Legend,134213,2013
@@ -10553,7 +10388,6 @@ I Called Him Morgan,128986,2017
 The Groomsmen,128911,2006
 5x2,128752,2005
 Eating Animals,128503,2018
-"The Good, the Bad, the Weird",128486,2010
 Alexandra,128222,2008
 Stonewall Uprising,128203,2010
 Drug War,128195,2013
@@ -10564,7 +10398,6 @@ The Artist and the Model,127958,2013
 Twin Town,127923,1997
 The Brand New Testament,127910,2016
 Bjork - Biophilia Live,127754,2014
-"Lovely, Still",127564,2010
 American Chai,127518,2002
 Petit Con,127426,1985
 The Wendell Baker Story,127414,2007
@@ -10588,7 +10421,6 @@ Far from the Tree,126556,2018
 Police Academy 7: Mission to Moscow,126247,1994
 Escape Fire,126238,2012
 Boulevard,126150,2015
-"Turn Me On, Dammit!",126085,2012
 Baran,125900,2001
 Europa Report,125687,2013
 The Young Karl Marx,125659,2018
@@ -10611,12 +10443,10 @@ Final: The Rapture,124561,2013
 The First Saturday in May,124294,2008
 The Square (2013),124244,2013
 The Thousand Faces Of Dunjia,124187,2017
-"Rita, Sue and Bob Too",124167,1987
 Knights of Badassdom,123854,2014
 The Beyond (re-issue),123843,1998
 Were the World Mine,123789,2008
 Haseena Maan Jaayegi,123719,1999
-"War Eagle, Arkansas",123670,2009
 Eureka,123572,1984
 Centurion,123570,2010
 What Women Want (Wo Zhi Nu Run Xin) ,123526,2011
@@ -10692,7 +10522,6 @@ The Big Picture,117463,1989
 Storm Surfers 3D,117090,2013
 Yossi,117047,2013
 Sir! No Sir!,116944,2006
-"Love, Sex and Eating the Bones",116869,2004
 Gummo,116799,1997
 Beware of Mr. Baker,116476,2012
 I Vitelloni,116428,2003
@@ -10734,7 +10563,6 @@ Games People Play: New York,113622,2004
 Mere Baap Pahle Aap,113576,2008
 Bran Nue Dae,113568,2010
 The Other Side of the Bed,113543,2003
-"We Love You, Sally Carmichael!",113435,2017
 Abacus: Small Enough to Jail,113278,2017
 God the Father,113276,2014
 The King's Choice,113231,2017
@@ -10793,7 +10621,6 @@ Anohana The Movie: The Flower We Saw That Day,109630,2014
 The 24-Hour Woman,109535,1999
 Bustin' Down the Door,109427,2008
 Blood Done Sign My Name,109383,2010
-"Truth or Consequences, N.M.",109261,1997
 The Weight of Water,109130,2002
 Darfur Now,109107,2007
 The Look of Silence,109089,2015
@@ -10921,7 +10748,6 @@ George A. Romero's Survival of the Dead,101740,2010
 Capital,101700,2013
 The Lure,101657,2017
 A LEGO Brickumentary,101531,2015
-"Oslo, August 31st",101475,2012
 The Way He Looks,101451,2014
 Man From Reno,101438,2015
 Score: A Film Music Documentary,101382,2017
@@ -10955,7 +10781,6 @@ Rubber,100370,2011
 V/H/S,100345,2012
 360,100343,2012
 Race for Glory,100326,1989
-"Short Kut, The Con Is On",100304,2009
 8: The Mormon Proposition,100280,2010
 Rejoice and Shout,100237,2011
 The Silence,100214,2013
@@ -10979,7 +10804,6 @@ The Stars Fell on Henrietta,99318,1995
 Kings of the Evening,99270,2010
 Cold Heaven,99219,1992
 Last Night,98986,2011
-"I Love You, Don't Touch Me",98973,1998
 Rock On 2,98868,2016
 Fellini's 8 1/2,98760,1963
 Train of Life,98687,1999
@@ -10993,7 +10817,6 @@ Fida,98297,2004
 Amsterdamned,98003,1988
 Brother of Sleep,97848,1996
 Red Doors,97848,2006
-"Tim Timmerman, Hope of America",97727,2017
 Klimt,97656,2007
 On Guard,97552,2002
 Seondal: The Man Who Sells the River,97477,2016
@@ -11002,7 +10825,6 @@ D.E.B.S.,97446,2005
 Aileen: The Life and Death of a Serial Killer,97362,2004
 Mary Shelley,97321,2018
 Wasabi,97220,2002
-"Love, Cecil",97214,2018
 Child's Pose,97170,2014
 Poster Boys,97049,2017
 Outside the Law (Hors-la-loi),96933,2010
@@ -11019,7 +10841,6 @@ Distant,96293,2004
 Autumn Spring,96269,2003
 Civic Duty,95953,2007
 The Fencer,95952,2017
-"Louise Bourgeois: The Spider, The Mistress and the Tangerine",95865,2008
 Signs of Life,95836,1989
 Kehta Hai Dil Baar Baar,95415,2002
 Classe Tous Risques (re-issue),95413,2005
@@ -11056,7 +10877,6 @@ In Custody,92612,1994
 Such a Long Journey,92569,2000
 The Road (2012),92476,2012
 Cuban Fury,92384,2014
-"New York, New York (2016)",92377,2016
 American: The Bill Hicks Story,92234,2011
 Somersault,92214,2006
 Passion,92181,2013
@@ -11123,7 +10943,6 @@ Starlet,88212,2012
 Tuya's Marriage,88148,2008
 Sunshine Superman,88097,2015
 Money for Nothing: Inside the Federal Reserve,88045,2013
-"My Love, Don't Cross that River",88018,2016
 Little Chenier,87939,2008
 Seeing Other People,87923,2004
 Advanced Style,87879,2014
@@ -11157,7 +10976,6 @@ Bay of Angels (re-issue),85840,2001
 Tab Hunter Confidential,85812,2015
 Color of the Cross,85802,2006
 The Rooftop,85755,2013
-"Where's the Party, Yaar?",85739,2003
 Lobster Cop,85693,2018
 Carancho,85526,2011
 An Almost Perfect Affair,85493,1979
@@ -11172,7 +10990,6 @@ How to Talk to Girls at Parties,84809,2018
 Revolver,84738,2007
 Decoys,84733,2004
 Dev,84728,2004
-"Live Nude Girls, Unite!",84706,2000
 51 Birch Street,84689,2006
 Wretches & Jabberers,84610,2011
 Visitors (2014),84577,2014
@@ -11182,7 +10999,6 @@ Watermark,84464,2014
 In This World,84299,2003
 Black Sheep (2007),84283,2007
 Chapter & Verse,84147,2017
-"Me & You, Us, Forever",84093,2008
 Los Sures,83992,2016
 Ocean Waves,83962,2016
 Why Me?,83882,1990
@@ -11260,7 +11076,6 @@ For the Love of Spock,80141,2016
 Sleep Dealer,80136,2009
 Nancy (2018),80115,2018
 Ramaiya Vastavaiya,80108,2013
-"Oye Lucky, Lucky Oye",80037,2008
 Jack Paradise,79974,2004
 Searching for the Wrong-Eyed Jesus,79916,2005
 Seventh Heaven,79808,1998
@@ -11337,7 +11152,6 @@ Office Killer,76054,1997
 The Sea,75994,2003
 Mukkabaaz,75929,2018
 Whitey: USA v. James J. Bulger,75881,2014
-"Bert Rigby, You're a Fool",75868,1989
 Forty Shades of Blue,75828,2005
 Hara-Kiri: Death of a Samurai,75688,2012
 Just a Sigh,75531,2014
@@ -11364,7 +11178,6 @@ Shoot Down,74421,2008
 Dragon Blade,74068,2015
 Set Me Free,74052,2000
 Virtual Sexuality,74007,1999
-"The Beans of Egypt, Maine",73956,1994
 After Auschwitz,73885,2018
 Nishabd,73819,2007
 Captive Hearts,73757,1987
@@ -11376,7 +11189,6 @@ On the Ice,73492,2012
 The Wonders,73378,2015
 Te Ata,73236,2017
 The Theory of Flight,73233,1998
-"God is Great, I'm Not",73181,2002
 Enemies of the People,73171,2010
 When the Whales Came,73131,1989
 Buster's Mal Heart,73121,2017
@@ -11398,7 +11210,6 @@ Eye of the Dolphin,72210,2007
 Loving Jezebel,72190,2000
 After Tiller,72125,2013
 Hollywood Buddha,72115,2004
-"Leon Morin, Priest",72078,2009
 Veil of Tears,72078,2014
 Naked in Ashes,72073,2005
 The Invisible War,71968,2012
@@ -11409,8 +11220,6 @@ Umberto D (re-issue),71816,2002
 Sweet 20,71775,2016
 New Suit,71743,2003
 Runaway Slave,71737,2012
-"Flamenco, Flamenco",71732,2014
-"Je T'aime, Je T'aime (2014 re-issue)",71717,2014
 Body of War,71716,2008
 A Letter to Momo,71712,2014
 Dummy,71646,2003
@@ -11466,10 +11275,8 @@ Tosca,69613,2002
 Dopamine,69544,2003
 Taur Mittran Di,69510,2012
 Parchi,69431,2018
-"Late August, Early September",69400,1999
 An Inconsistent Truth,69394,2012
 Wild Geese II,69342,1985
-"Langrishe, Go Down",69338,2002
 Girls Can't Swim,69250,2002
 Kenny,69220,2008
 White on Rice,69171,2009
@@ -11712,7 +11519,6 @@ Declaration of War,59100,2012
 The Trials of Muhammad Ali,59081,2013
 Vulgaria,59059,2012
 Screen Door Jesus,59000,2005
-"Westwood: Punk, Icon, Activist",58979,2018
 Shiloh 2: Shiloh Season,58946,1999
 The One I Wrote For You,58872,2014
 Sonatine,58834,1998
@@ -11746,7 +11552,6 @@ Only the Strong Survive,57581,2003
 Woman Walks Ahead,57528,2018
 Sold,57527,2016
 Borgman,57474,2014
-"Patrik, Age 1.5",57468,2009
 Lost in Thailand,57387,2013
 Bhavesh Joshi Superhero,57376,2018
 Ramen Heads,57345,2018
@@ -11779,7 +11584,6 @@ Feast,56131,2006
 Dorm Daze,56127,2003
 Promenons-nous dans les bois,56119,2000
 In Bloom,56092,2014
-"God Said, 'Ha!'",55970,1999
 Nijinsky: The Diaries of...,55968,2002
 Beautiful Creatures,55835,2001
 Terms and Conditions May Apply,55824,2013
@@ -11849,7 +11653,6 @@ Deitrick Haddon's A Beautiful Soul,54008,2012
 Dangerous Liaisons (2012),54000,2012
 Surviving Progress,53953,2012
 Afraid of the Dark,53932,1992
-"1,000 Times Good Night",53895,2014
 At Middleton,53837,2014
 Ballot Measure 9,53819,1995
 Free Men,53810,2012
@@ -11873,7 +11676,6 @@ High Strung (2016),53447,2016
 God of Vampires,53345,2010
 High Lonesome: The Story of Bluegrass Music,53319,1994
 Ugly Me,53250,2008
-"Police, Adjective",53206,2009
 Boys Life 4: Four Play,53169,2003
 Aloft,53086,2015
 A Trip to the Moon/The Extraordinary Voyage,52986,2012
@@ -11885,7 +11687,6 @@ Southie,52819,1999
 Occupy Unmasked,52768,2012
 The Club,52761,2016
 Being 17,52713,2016
-"Women, Art, Revolution",52681,2011
 Reggie's Prayer,52665,1997
 Prisoners of the Sun,52654,1991
 Close to You,52654,2006
@@ -11914,7 +11715,6 @@ Nunzio,52195,1978
 Dare Not Walk Alone,52166,2008
 The Missing Picture,52164,2014
 Follow Me Home,52155,1997
-"Surfer, Dude",52132,2008
 Before We Vanish,52087,2018
 Screamers (2006),52034,2006
 Herod's Law,52000,2003
@@ -11930,7 +11730,6 @@ The Quay Brothers in 35mm,51858,2015
 Beautiful Accident,51766,2017
 Home of the Brave,51708,2006
 Burma VJ,51672,2009
-"This World, Then the Fireworks",51618,1997
 Moonlight,51570,2006
 Agnivarsha - The Fire and the Rain,51549,2002
 Boss of It All,51548,2007
@@ -12003,7 +11802,6 @@ Difret,49667,2015
 The Fantasticks,49666,2000
 Curdled,49620,1996
 NOW: In the Wings on a World Stage,49591,2014
-"Nico, 1988",49497,2018
 Ciao,49494,2008
 Red Herring,49480,2015
 Zus & Zo,49468,2003
@@ -12042,7 +11840,6 @@ Following,48482,1999
 Tales from Earthsea,48461,2010
 Lucky Them,48421,2014
 Decoding Annie Parker,48390,2014
-"Lebanon, Pa.",48381,2011
 XXY,48334,2008
 Way Down Town,48333,2000
 Lunacy,48324,2006
@@ -12053,8 +11850,6 @@ The Bookshop,48000,2018
 National Lampoon's Blackball,48000,2005
 Two Weeks,47986,2006
 Saving Banksy,47965,2017
-"All's Well, End's Well (2012)",47919,2012
-"The Butcher, the Chef and the Swordsman",47896,2011
 Love N Dancing,47812,2009
 Quest (2017),47807,2017
 An Amazing Couple: Trilogy 2,47806,2004
@@ -12076,7 +11871,6 @@ International Khiladi,47238,1999
 Never Been Thawed,47219,2005
 Went The Day Well? (2011 re-release),47214,2011
 The Goebbels Experiment,47211,2005
-"Fear, Anxiety and Depression",47148,1989
 Owl and the Sparrow,47071,2009
 Ivans XTC,47027,2002
 Diary of a Country Priest (2011 re-release),46979,2011
@@ -12146,7 +11940,6 @@ There's No Place Like Utopia,45254,2014
 Karobaar,45200,2000
 CornerStore,45176,2011
 American Made Movie,45175,2013
-"Happy, Happy",45154,2011
 The Zodiac,45148,2006
 Candy,45128,2006
 Brothers of the Head,45082,2006
@@ -12187,7 +11980,6 @@ Loaded,44231,1996
 Nuts!,44230,2016
 Danny Says,44213,2016
 Regret to Inform,44204,1999
-"Paris, France",44159,1994
 Apaharan,44133,2005
 Wedding Bell Blues,44052,1997
 Digging to China,43961,1998
@@ -12223,7 +12015,6 @@ Next Goal Wins,43089,2014
 3 Backyards,43073,2011
 Nobody Else But You,43040,2012
 Springtime in a Small Town,43017,2004
-"First Love, Last Rites",42953,1998
 Charlie's Country,42937,2015
 Hadh Kar Di Aapne,42914,2000
 Hammett,42914,1982
@@ -12278,7 +12069,6 @@ The Comedy,41113,2012
 Karl Marx City,41072,2017
 Western,41072,2018
 The Myth of the American Sleepover,41045,2011
-"Sobibor, October 14, 1943, 4PM",41040,2001
 Tom Dowd and the Language of Music,40919,2004
 Moving Midway,40864,2008
 Simon Magus,40861,2001
@@ -12429,7 +12219,6 @@ Twist (1993),36875,1993
 Monkey Warfare,36875,2006
 The Body,36849,2001
 Wind Chill,36804,2007
-"Forever, Lulu",36786,1987
 Uncertainty,36689,2009
 Araby,36648,2018
 Mind Game (2017 re-release),36613,2018
@@ -12452,7 +12241,6 @@ Touchy Feely,36128,2013
 New Year's Day,36106,1989
 Dirty Love,36099,2005
 Jiminy Glick in La La Wood,36039,2005
-"Kill Me, Deadly",36027,2016
 Not Cool,36026,2014
 Welcome to Leith,36010,2015
 Mozart and the Whale,36006,2006
@@ -12489,7 +12277,6 @@ Rat Film,35195,2017
 Mauvais Sang (2013 re-release),35176,2013
 Bloodfist III: Forced to Fight,35154,1992
 That Man From Rio,35144,2014
-"Goodbye, Dragon Inn",35120,2004
 When Harry Tries to Marry,35100,2011
 Tai Chi Hero,35067,2013
 The Girl (2013),35048,2013
@@ -12549,7 +12336,6 @@ White Bird in a Blizzard,33821,2014
 It Felt Like Love,33817,2014
 The Lighthorsemen,33779,1988
 Brief Interviews with Hideous Men,33745,2009
-"My Country, My Country",33620,2006
 Le Corbeau (2018 re-issue),33608,2018
 What to Do in Case of Fire,33545,2002
 Friends and Lovers,33543,1999
@@ -12627,7 +12413,6 @@ Brimstone and Glory,32059,2017
 The Weekend,32050,2000
 Kiss the Bride,32033,2008
 Last Life in the Universe,32014,2004
-"Rio, I Love You",31982,2016
 District of Corruption,31954,2012
 Reel Paradise,31918,2005
 Going Shopping,31908,2005
@@ -12645,7 +12430,6 @@ Stander,31651,2004
 The Substance of Fire,31638,1997
 Abuse of Weakness,31611,2014
 Signature Move,31551,2017
-"Out 1, noli me tangere",31539,2015
 The Passionate Thief (2014 re-release),31539,2014
 Intent to Destroy,31534,2017
 Musical Chairs,31478,2012
@@ -12661,7 +12445,6 @@ Hats Off,31272,2008
 The Hottest State,31216,2007
 The Raspberry Reich,31211,2004
 The Wedding Song,31160,2009
-"Hey, Boo: Harper Lee & To Kill A Mockingbird",31135,2011
 Small Town Murder Songs,31133,2011
 7 Witches,31100,2017
 Maniac (2013),31081,2013
@@ -12704,7 +12487,6 @@ Take My Eyes,30496,2006
 The Boondock Saints,30471,2000
 Dealt,30414,2017
 These Birds Walk,30408,2013
-"3 1/2 Minutes, 10 Bullets",30407,2015
 Being Charlie,30400,2016
 The Take,30380,2004
 Rock and Rule,30379,1983
@@ -12816,7 +12598,6 @@ Stations of the Elevated,28516,2014
 Salvation Boulevard,28468,2011
 The Seasons in Quincy: Four Portraits of John Berger,28456,2016
 P.S. Your Cat is Dead,28454,2003
-"Rabin, the Last Day",28411,2016
 Morning Glory (1993),28409,1993
 Struck By Lightning,28378,2013
 Southpaw: The Francis Barrett Story,28365,2000
@@ -12824,11 +12605,9 @@ BoyBand,28336,2010
 Guys and Balls,28324,2006
 North Sea Texas,28307,2012
 The Nightmare,28281,2015
-"Like Sunday, Like Rain",28208,2015
 39 Pounds of Love,28195,2005
 7 Chinese Brothers,28180,2015
 Teddy Bears' Picnic,28149,2002
-"South of Heaven, West of Hell",28149,2001
 The Ambassador,28102,2012
 Closed Curtain,28098,2014
 Poor Boy,28093,2018
@@ -12850,7 +12629,6 @@ King of the Jungle,27841,2001
 Radio Dreams,27836,2017
 Don Carlo at La Scala,27834,2008
 Best Laid Plans,27816,1999
-"Tuesday, After Christmas",27813,2011
 [Rec] 2,27766,2010
 The Villainess,27741,2017
 Simon Killer,27740,2013
@@ -12899,12 +12677,10 @@ The Garden,26931,2009
 Cape of Good Hope,26904,2005
 The Dukes,26875,2008
 Abduction: The Megumi Yokota Story,26859,2006
-"The Devil, Probably (2012 re-release)",26816,2012
 A Fish Without a Bicycle,26799,2004
 Trudell,26756,2006
 Earth Days,26748,2009
 Tap World,26747,2015
-"Massoud, the Afghan",26747,2002
 Here (2012),26743,2012
 Neon Bull,26734,2016
 Khiladi 420,26731,2000
@@ -12916,7 +12692,6 @@ Lyrical Nitrate,26662,1991
 Snow Cake,26651,2007
 The Sweeney,26650,2013
 Peace Officer,26632,2015
-"Pink Ribbons, Inc.",26608,2012
 All the Little Animals,26558,1999
 Barely Legal,26511,2005
 All About Lily Chou-Chou,26485,2002
@@ -12926,14 +12701,12 @@ Front Cover,26409,2016
 Unknown (2006),26403,2006
 Nine Dead Gay Guys,26377,2003
 The Daughter,26376,2017
-"Clean, Shaven",26351,1995
 Belle de jour (2018 re-release),26331,2018
 Two Bits,26282,1995
 Eyes Wide Open,26258,2010
 October Country,26185,2010
 Standing Tall (La tete haute),26144,2016
 The Misandrists,26123,2018
-"Sex, Politics & Cocktails",26087,2005
 They Call Us Monsters,26080,2017
 Lipstick and Dynamite,26073,2005
 Perestroika,26064,2009
@@ -12956,7 +12729,6 @@ The Air I Breathe,25775,2008
 The Willow Tree,25752,2007
 Through the Fire,25752,2006
 Stephanie Daley,25751,2007
-"Ladies and Gentlemen, The Fabulous Stains",25728,1982
 Chevalier,25696,2016
 Go Now!,25695,1998
 The Old Dark House (2017 re-issue),25678,2017
@@ -13027,7 +12799,6 @@ Bastards,24525,2013
 Vivre sa vie (re-issue),24517,2008
 Hat Trick,24502,2007
 Sudden Fear (2016 re-release),24476,2016
-"Right Now, Wrong Then",24470,2016
 Two Drifters,24452,2006
 Otter 501,24449,2012
 Off the Black,24425,2006
@@ -13085,7 +12856,6 @@ Sex and Death 101,23624,2008
 Arnold's Park,23616,2007
 Lost Bohemia,23584,2011
 Arranged,23571,2007
-"A Woman, a Part",23562,2017
 Blackboards,23520,2002
 Opening Night,23488,1991
 Gridiron Heroes,23487,2016
@@ -13109,7 +12879,6 @@ Finding Oscar,23116,2017
 The Iran Job,23115,2012
 Dear Wendy,23106,2005
 The Grace of Jake,23078,2017
-"Hippocrates, Diary of a French Doctor",23050,2015
 History of Jazz: Oxygen for the Ears,23048,2014
 Video Games: The Movie,23043,2014
 Incantato,23039,2004
@@ -13228,7 +12997,6 @@ Dreaming Lhasa,21504,2007
 Thank You for Your Service,21497,2016
 Violeta Went to Heaven,21496,2013
 Trophy,21439,2017
-"You, the Living",21438,2009
 Three of Hearts,21429,2005
 The Cry (La Llorona),21427,2008
 Almost Salinas,21419,2003
@@ -13237,7 +13005,6 @@ Always Kabhi Kabhi,21381,2011
 The Guys,21366,2003
 The Decent One,21327,2014
 Tio Papi,21316,2013
-"No Date, No Signature",21312,2018
 Memphis,21286,2014
 The Burial Society,21285,2004
 Hush!,21278,2002
@@ -13281,7 +13048,6 @@ Voices in Wartime,20702,2005
 The Great Flood,20694,2014
 The Last Dispatch,20684,2005
 The Secret Life of Words,20678,2006
-"I Love You, I Love You Not",20677,1997
 Tony Manero,20677,2009
 The Isle,20666,2002
 Hunter Gatherer,20641,2016
@@ -13303,7 +13069,6 @@ Boy Meets Girl (2015),20441,2015
 The First Basket,20440,2008
 The Blackcoat's Daughter,20435,2017
 Never,20431,2016
-"Love, Rosie",20431,2015
 Orwell Rolls in His Grave,20389,2004
 The Highest Pass,20386,2012
 RV: Resurrected Victims,20374,2017
@@ -13333,19 +13098,16 @@ How to Grow a Band,20135,2012
 Man from Outerspace,20102,2017
 Love Me True,20100,2016
 Harmony and Me,20099,2009
-"Muhammad Ali, The Greatest",20073,2003
 Run and Jump,20061,2014
 The Past is a Grotesque Animal,20056,2014
 State of Fear,20055,2006
 Apocalypsis,20052,2018
 Floundering,20031,1994
 Glass: A Portrait of Philip in Twelve Parts,20018,2008
-"No Pay, Nudity",20017,2016
 The Ground Truth,20013,2006
 Terraferma,19996,2013
 Charlotte Rampling: The Look,19988,2011
 Eight Hours Don't Make a Day (2018 re-release),19987,2018
-"One Sings, the Other Doesn't",19919,2018
 Wedding Palace,19908,2013
 Forbidden Games (1952),19889,2015
 The Dead Girl,19875,2006
@@ -13461,7 +13223,6 @@ Glory (2017),18415,2017
 The Reception,18389,2005
 Deadfall,18369,1993
 OKA!,18364,2011
-"Live Fast, Die Young",18335,2008
 Dear Zachary: A Letter to a Son About His Father,18334,2008
 The Channel,18319,2016
 A Pig Across Paris (2013 re-issue),18297,2013
@@ -13525,7 +13286,6 @@ The Other One,17727,2015
 Kelly & Cal,17702,2014
 Bad Grandmas,17688,2017
 Ganja & Hess (2018 re-release),17679,2018
-"Comrades, Almost a Love Story",17676,1998
 Mental,17669,2013
 Molly,17650,1999
 The History of Future Folk,17646,2013
@@ -13533,7 +13293,6 @@ King of Hearts (2018 re-release),17646,2018
 Night at the Golden Eagle,17643,2002
 The New Twenty,17625,2009
 How He Fell in Love,17575,2016
-"Milwaukee, Minnesota",17528,2005
 Chronicle of Anna Magdalena Bach,17527,2018
 Sunset Story,17508,2005
 Streit's: Matzo and the American Dream,17506,2016
@@ -13728,7 +13487,6 @@ The Education of Charlie Banks,15078,2009
 Cheatin',15077,2015
 Of Mind and Music,15073,2016
 Barefoot,15071,2014
-"Blood, Guts, Bullets & Octane",15035,1999
 I'm Not Jesus Mommy,15005,2011
 The Tenant (2011),15003,2011
 Oolong Courtyard,15000,2018
@@ -13887,7 +13645,6 @@ A Long Way Down,13347,2014
 One Last Thing...,13334,2006
 Shed Skin Papa,13331,2018
 Hugo Pool,13330,1997
-"Yes Nurse, No Nurse",13325,2004
 Violet Tendencies,13304,2010
 Camp X-Ray,13302,2014
 Sherman's Way,13282,2009
@@ -13913,7 +13670,6 @@ Nothing But a Man (2012 re-release),13063,2012
 My Mexican Shivah,13042,2008
 Dog Days,13031,2003
 Jim (2010),13015,2010
-"How Much Does Your Building Weigh, Mr. Foster?",13013,2012
 Norwegian Wood,13000,2012
 Raja,13000,2004
 Leap Year (2011),12979,2011
@@ -13931,7 +13687,6 @@ Alien Abduction,12897,2014
 Taipei Story (2017 re-release),12897,2017
 Rock Bottom,12890,2007
 J'entends plus la guitare,12876,2008
-"Lou Andreas-Salomé, the Audacity to be Free",12875,2018
 I Trust You to Kill Me,12854,2006
 Permanent,12847,2017
 The Art of Being Straight,12831,2009
@@ -13964,16 +13719,13 @@ Around June,12578,2012
 Dial M for Murder,12562,1954
 My Art,12554,2018
 Daltry Calhoun,12551,2005
-"The Photographer, His Wife, Her Lover",12546,2006
 The Monster (2016),12544,2016
 Blind,12522,2017
 Jake's Corner,12522,2008
 City of Women (2016 re-issue),12516,2016
 Hit Me,12500,1998
 The Ones Below,12488,2016
-"Kiki, Love to Love",12450,2016
 Felicite,12433,2017
-"10,000 Km",12423,2015
 Seven Beauties (2017 re-release),12408,2017
 For Ellen,12396,2012
 America the Beautiful 2: The Thin Commandments,12366,2011
@@ -14002,7 +13754,6 @@ Touch the Wall,12156,2014
 Shahid,12153,2013
 Wolves,12139,2014
 Back Door Channels,12139,2011
-"If I Want to Whistle, I Whistle",12135,2011
 In No Great Hurry: 13 Lessons in Life with Saul Leiter,12133,2014
 The Most Unknown,12119,2018
 Hot Water,12101,2016
@@ -14108,7 +13859,6 @@ The Amazing Catfish,11342,2014
 Saigon Bodyguards,11314,2017
 Viktoria,11314,2016
 Cinemania,11305,2003
-"Otto; or, Up with the Dead People",11295,2008
 The Devil's Violinist,11294,2015
 Live Freaky! Die Freaky!,11290,2006
 Dishkiyaoon,11288,2014
@@ -14128,7 +13878,6 @@ Rendezvous in July (2018 re-release),11168,2018
 Lost in Beijing,11163,2008
 Greetings from Tim Buckley,11157,2013
 The Last Party,11156,1993
-"Now, Forager",11146,2012
 The Wedding Party 2: Destination Dubai,11140,2018
 Dragon (2012),11137,2012
 The Suburbans,11130,1999
@@ -14183,7 +13932,6 @@ Jupiter's Wife,10622,1995
 Peter and Vandy,10618,2009
 Rana's Wedding,10604,2003
 Midget Zombie Takeover,10604,2013
-"Marriage, Italian Style (2011 re-release)",10600,2011
 Inside the Mind of Leonardo Da Vinci in 3D,10600,2014
 whaledreamers,10584,2008
 Schizopolis,10580,1997
@@ -14192,7 +13940,6 @@ China Heavyweight,10550,2012
 Nola,10550,2003
 Motorama,10535,1993
 White Rainbow,10529,2006
-"Fast Trip, Long Drop",10524,1995
 Fighting Tommy Riley,10514,2005
 Waiting for Armageddon,10501,2010
 Splinter (2007),10497,2007
@@ -14201,7 +13948,6 @@ Zero Kelvin,10493,1996
 Santa Mesa,10490,2012
 The Autopsy of Jane Doe,10474,2016
 The Milk of Sorrow,10462,2010
-"Norte, the End of History",10457,2014
 Evil Intent,10454,2013
 Class Rank,10452,2018
 Rogue,10452,2008
@@ -14235,14 +13981,12 @@ Miss Minoes,10189,2011
 Ethan Mao,10178,2005
 The Forecaster,10172,2015
 Zindagi Rocks,10172,2006
-"Black Is, Black Ain't",10171,1995
 The Tiger and the Snow,10167,2006
 Glen or Glenda,10158,1981
 A Bird of the Air,10152,2011
 Husbands in Goa,10135,2012
 Revolution #9,10133,2002
 Beta Test,10104,2016
-"Good Morning, Night",10093,2005
 Putin's Kiss,10082,2012
 Before I Disappear,10078,2014
 Little Accidents,10071,2015
@@ -14255,7 +13999,6 @@ Circle,10024,2010
 The Mind of Mark DeFriest,10021,2015
 Arjun: The Warrior Prince,10017,2012
 The Do-Deca-Pentathlon,10000,2012
-"Hugh Hefner: Playboy, Activist and Rebel",10000,2010
 Furious (Legend of Kolovrat),9996,2018
 Into the Forest,9995,2016
 Made in France,9956,2016
@@ -14286,7 +14029,6 @@ The Book of Life,9740,1999
 Finding Home,9736,2005
 It's the Rage,9730,2000
 The President's Last Bang,9724,2005
-"If You Don't, I Will",9719,2014
 Machines,9710,2017
 Antoine and Antoinette (2013 re-issue),9704,2013
 Brutal Beauty: Tales of the Rose City Rollers,9677,2010
@@ -14319,9 +14061,7 @@ As Tears Go By,9436,2008
 If I Were You,9432,2013
 I'll Sing for You,9425,2004
 Zero Charisma,9417,2013
-"One Cut, One Life",9406,2015
 Smiley Face,9397,2007
-"L'Chayim, Comrade Stalin!",9397,2003
 Two by Scorsese (re-issue),9395,2005
 Primo Amore,9392,2005
 Miss Kiet's Children,9384,2017
@@ -14417,7 +14157,6 @@ Amnesia,8700,2017
 Man on a Mission,8688,2012
 Without the King,8663,2008
 Amexicano,8655,2008
-"Small, Beautiful Moving Parts",8631,2012
 A Good Day to Be Black and Sexy,8629,2008
 Drama/Mex,8628,2007
 Comet,8623,2014
@@ -14615,10 +14354,8 @@ Li'l Quinquin,7192,2015
 The Strange Color of Your Body's Tears,7182,2014
 ABCs of Death 2,7171,2014
 It Had to be You,7162,2016
-"Ugly, Dirty and Bad (Re-Release)",7144,2016
 Logan,7137,2010
 Saint of 9/11,7137,2006
-"Sorry, Haters",7129,2006
 Electric Shadows,7129,2005
 Mendy - A Question of Faith,7123,2006
 A Perfect Man,7117,2013
@@ -14643,7 +14380,6 @@ Camden 28,6983,2007
 The Killing of John Lennon,6975,2008
 Fathers & Sons,6960,1992
 I Stand Alone,6955,1999
-"Love, Marilyn",6950,2012
 Anamorph,6950,2008
 Finding Mr. Right,6945,2013
 Los Angeles Plays Itself,6945,2004
@@ -14668,7 +14404,6 @@ Steve McQueen: The Man & Le Mans,6843,2015
 Janie Jones,6840,2011
 Mad Tiger,6823,2016
 The Mutant Chronicles,6820,2009
-"No God, No Master",6796,2014
 Operation Homecoming,6795,2007
 Blood of His Own,6792,1998
 Finding Bliss,6783,2010
@@ -14711,9 +14446,7 @@ The Last Place on Earth,6505,2004
 Jews of Egypt,6505,2014
 Windfall,6504,2012
 The Beat Hotel,6480,2012
-"Magdalena, The Unholy Saint",6470,2005
 Scum (2017 re-release),6461,2017
-"Congo: White King, Red Rubber, Black Death",6458,2005
 Beyond Honor,6437,2006
 Ek Vivah Aisa Bhi,6437,2008
 The Suicide Theory,6434,2015
@@ -14756,7 +14489,6 @@ It's All About Love,6140,2004
 Guitar Innovators: John Fahey & Nels Cline,6132,2013
 The Missing Link,6127,1988
 Scottsboro: An American Tragedy,6123,2001
-"El Sicario, Room 164",6123,2011
 Welcome to Pine Hill,6115,2013
 Arise from Darkness,6112,2017
 Rangrezz,6108,2013
@@ -14777,7 +14509,6 @@ Tekkon Kinkreet,6000,2007
 The Bride & The Grooms,5995,2009
 BearCity,5980,2010
 On Wings of Eagles,5975,2017
-"Sex, Death and Bowling",5972,2015
 The Playroom,5964,2013
 Cavemen,5948,2014
 American Animal,5928,2012
@@ -14801,7 +14532,6 @@ Top Spin,5858,2015
 The Work,5853,2017
 Bourek,5844,2016
 Shout Gladi Gladi,5839,2015
-"2 Autumns, 3 Winters",5819,2014
 Devil's Island,5814,1999
 Bad Blood (re-issue),5812,2001
 Emile,5799,2005
@@ -14936,7 +14666,6 @@ Tournament,4942,2017
 A Whale of a Tale,4941,2018
 Tomorrow When the War Began,4936,2012
 Company Town,4934,2017
-"Peace, Propaganda and the Promised Land",4930,2005
 Supporting Characters,4917,2013
 Gerontophilia,4916,2015
 Guidance,4900,2015
@@ -14975,7 +14704,6 @@ Isn't This a Time! A Tribute to Harold Leventhal,4683,2005
 Death Metal Angola,4674,2014
 Blood on the Mountain,4664,2016
 Night School (2017),4663,2017
-"Sia, The Dream of the Python",4662,2002
 I Love You Both,4661,2017
 How to Draw a Bunny,4658,2004
 My Big Fat Independent Movie,4655,2005
@@ -15013,7 +14741,6 @@ Unrelated,4529,2014
 Vengeance: A Love Story,4526,2017
 House of the Sleeping Beauties,4509,2008
 Synchronicity,4505,2016
-"Those Glory, Glory Days",4504,1986
 Arabian Nights: Volume 3 - The Enchanted One,4502,2015
 The Other Side of Everything,4491,2018
 The Pulitzer at 100,4489,2017
@@ -15023,7 +14750,6 @@ The Summer of Sangaile,4480,2015
 Looking for Kitty,4480,2006
 German Concentration Camps Factual Survey,4468,2017
 The Ministers,4447,2009
-"Farewell, Herr Schwarz",4445,2015
 Club Life,4444,2015
 Generation Iron 2,4439,2017
 Cowboy del Amor,4438,2006
@@ -15033,7 +14759,6 @@ Sacred Stage,4410,2005
 The Truth About Emanuel,4404,2014
 The Peacemaker (2018),4400,2018
 30-Love,4392,2017
-"A Cool, Dry Place",4390,1999
 Open My Heart,4381,2004
 Between Us,4380,2013
 The End of Time,4375,2013
@@ -15053,7 +14778,6 @@ My Kingdom,4296,2002
 Art Is... The Permanent Revolution,4291,2012
 Anna,4288,2014
 Brown's Requiem,4287,2000
-"Romulus, My Father",4283,2008
 Set Fire to the Stars,4280,2015
 Jersey Guy,4268,2003
 This Divided State,4255,2005
@@ -15109,8 +14833,6 @@ The Woman Who Left,3974,2017
 After School,3967,1988
 Three Worlds,3952,2013
 Just Say Love,3944,2010
-"The Cop, the Criminal and the Clown",3935,2007
-"Blood, Friends and Money",3930,2000
 Salvation Army,3929,2015
 Going Under,3917,2006
 Afterschool,3911,2009
@@ -15122,7 +14844,6 @@ Swim Little Fish Swim,3877,2014
 Pontypool,3865,2009
 Hollidaysburg,3861,2014
 The Moth Diaries,3838,2012
-"High Tech, Low Life",3836,2013
 Saints and Sinners,3826,2004
 Cocote,3815,2018
 Free Radicals: A History of Experimental Film,3804,2012
@@ -15151,7 +14872,6 @@ The Harvest/La Cosecha,3709,2011
 The Helix... Loaded,3700,2005
 Heartless,3697,2010
 Catch Me If You Can (1989),3686,1989
-"Still, the Children Are Here",3685,2004
 Suits,3676,1999
 Passion Play,3669,2011
 Soul on a String,3669,2017
@@ -15191,7 +14911,6 @@ Revolution OS,3500,2002
 Who's Crazy? (2017 re-release),3497,2017
 Locker 13,3496,2014
 The Citizen (2018),3495,2018
-"Love, Sweat and Tears",3482,2017
 Metal Messiah,3476,2010
 The Hacker Wars,3470,2014
 The Full Picture,3467,2010
@@ -15311,7 +15030,6 @@ Ash Wednesday,2942,2002
 Kepler's Dream,2923,2017
 A Kind of Murder,2915,2016
 Demons,2900,2017
-"On the Other Hand, Death",2892,2008
 Beautopia,2870,1999
 Shrooms,2863,2008
 The Professor: Tai Chi's Journey West,2852,2016
@@ -15402,7 +15120,6 @@ He Was a Quiet Man,2431,2007
 Firedancer,2422,2004
 L.A. Slasher,2421,2015
 ZigZag,2418,2002
-"1,000 Rupee Note",2404,2016
 Looking for an Icon,2393,2007
 Polar Opposites,2377,2008
 The Optimists: The Story of the Rescue of the Bulgarian Jews from the Holocaust,2377,2005
@@ -15478,10 +15195,8 @@ FAQs,1967,2006
 Steal Me,1967,2005
 The Temptation of St. Tony,1963,2010
 Sikandar,1954,2009
-"Accidental Courtesy: Daryl Davis, Race & America",1940,2017
 Best Man Down,1938,2013
 West of the Jordan River,1926,2018
-"Love, Wedding, Marriage",1926,2011
 Shuttle,1925,2009
 Badland,1924,2007
 A Mother's Courage: Talking Back to Autism,1916,2010
@@ -15547,7 +15262,6 @@ The Tunnel (2011),1532,2011
 El Velador (The Night Watchman),1530,2012
 Rhymes for Young Ghouls,1529,2014
 Postman Pat: The Movie,1519,2014
-"Carmo, Hit the Road",1512,2010
 Stations of the Cross,1505,2015
 Souldier,1500,2014
 Blackwoods,1500,2002
@@ -15575,7 +15289,6 @@ The Silence of Mark Rothko,1422,2016
 Shwaas,1416,2004
 Forest for the Trees (2017 re-release),1410,2017
 Drool,1403,2010
-"Love, Honor and Obey",1400,2001
 Four Lane Highway,1393,2007
 Execution of Wanda Jean,1386,2002
 Besotted,1379,2002
@@ -15692,7 +15405,6 @@ Steve + Sky,624,2005
 Anatomy 2,623,2004
 Death of a Superhero,607,2012
 United Passions,607,2015
-"Jesus, You Know",604,2004
 Gottfried Helnwein and the Dreaming Child,601,2012
 Shake Hands with the Devil,594,2010
 Sorority Girls' Revenge,582,2001
@@ -15734,8 +15446,6 @@ Lou! Journal infime,287,2015
 Intervention,279,2007
 Playback,264,2012
 Satanic,252,2016
-"Pretty Village, Pretty Flame",211,1998
-"Mummy, I'm a Zombie",120,2014
 The Objective,95,2009
 Dog Eat Dog,80,2009
 Paranoid Girls,78,2015
