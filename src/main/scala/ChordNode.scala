@@ -42,6 +42,7 @@ class ChordNode(val nodeID: Int, val fingerSize: Int) extends Actor {
   val totalHopCount = new AtomicInteger(0)
 
   def receive = {
+    // Collect Hop Counts from Nodes
     /**
      * When the first node joins the network, its successor and predecessor is set to itself.
      * The entries of the finger table will be initially pointed to itself.
