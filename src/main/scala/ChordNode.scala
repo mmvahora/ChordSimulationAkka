@@ -332,12 +332,12 @@ class ChordNode(val nodeID: Int, val fingerSize: Int) extends Actor {
     //if successsor not found, checks the predeccessor
     if(successorCheck == 0){
       if(checkPredecessor(keyHash)){
-        context.actorSelection(Simulator.pathPrefix + successor) ! findOrAdd(keyHash, isAdd)
+        context.actorSelection(Simulator.pathPrefix + successor) ! (if (isAdd) addKeyToNode(keyHash) else getKeyFromNode(keyHash))
         predecessorCheck = 1
       }
       //if both successor and predeccessor not found
       else if (predecessorCheck == 0){
-        context.actorSelection(Simulator.pathPrefix + fingerTable(closestPrecedingFinger(keyHash))) ! findOrAdd(keyHash, isAdd)
+        context.actorSelection(Simulator.pathPrefix + fingerTable(closestPrecedingFinger(keyHash))) ! (if (isAdd) addKeyToNode(keyHash) else getKeyFromNode(keyHash))
       }
     }
   }
