@@ -22,7 +22,8 @@ class ChordNode(val nodeID: Int) extends Actor {
   var successor: Int = -1
   var predecessor: Int = -1
   var nodeInRing: Boolean = false
-
+  var hopCount = 0
+  var associatedKeyData = collection.mutable.Map[Int, String]()
 
   def receive = {
     /**
@@ -199,13 +200,15 @@ class ChordNode(val nodeID: Int) extends Actor {
         val Key = Utilities.mkHash(Simulator.pathPrefix + nodeID + i, Simulator.chordSize)
         Simulator.keyToMovies(Key) = Simulator.movies_list(Simulator.movies_count)
         Simulator.movies_count = Simulator.movies_count + 1
+        associatedKeyData(Key)= Simulator.movies_list(Simulator.movies_count)
         Thread.sleep(10)
         self ! addKeyToNode(Key)
       }
     }
 
     case addKeyToNode(keyHash: Int) => {
-      Simulator.TotalHops = Simulator.TotalHops + 1;
+      hopCount = hopCount + 1
+      Simulator.TotalHops = Simulator.TotalHops + 1
       var successorCheck = 0
       var predecessorCheck = 0
 
@@ -231,8 +234,6 @@ class ChordNode(val nodeID: Int) extends Actor {
     }
 
   }
-
-
 
   def checkSuccessor(key: Int): Boolean = {
 
