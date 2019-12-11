@@ -1,13 +1,8 @@
-import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicBoolean
 
 import akka.actor.{ActorRef, ActorSystem, Props}
-import com.typesafe.config.ConfigFactory
 import org.slf4j.{Logger, LoggerFactory}
 
-import scala.collection.convert.decorateAsScala._
-import scala.collection._
-import scala.collection.concurrent
 import scala.collection.concurrent.TrieMap
 
 object Simulator {
@@ -63,7 +58,7 @@ object Simulator {
         initNode = Utilities.mkHash(i.toString, Simulator.chordSize)
         logger.debug("Hash Id for the initial node" + initNode )
         //setting actor properties
-        node = system.actorOf(Props(new ChordNode(initNode)), initNode.toString)
+        node = system.actorOf(Props(new ChordNode(initNode, fingerSize)), initNode.toString)
         node ! joinNode(-1)
         Thread.sleep(1000)
       }
@@ -73,7 +68,7 @@ object Simulator {
         val nextNode = Utilities.mkHash(i.toString, Simulator.chordSize)
         logger.debug("Hash Id for the next available node" + initNode )
         //setting the actor properties
-        val node = system.actorOf(Props(new ChordNode(nextNode)), nextNode.toString)
+        val node = system.actorOf(Props(new ChordNode(nextNode, fingerSize)), nextNode.toString)
         node ! joinNode(initNode)
         while (temp == flag.get && nodesInChord < numberOfNodes) {
           //sleeps till the node successfully joins the chord ring

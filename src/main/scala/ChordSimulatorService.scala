@@ -53,6 +53,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
   private val logging = LoggerFactory.getLogger("Service")
   private var isPaused = false
   private val stats = new ConcurrentHashMap[String, AtomicLong]()
+  private val computerStats = new ConcurrentHashMap[String, AtomicLong]()
   final val READ: Byte = 0
   final val WRITE: Byte = 0
   private val hopCounts = new ConcurrentHashMap[Int, AtomicInteger]()
@@ -208,12 +209,11 @@ object ChordSimulatorService extends Directives with JsonSupport {
 
                   // collect results (if indicated by timeMarks)
                   var collectCount = 0
-//                  var computerCollectCount = 0
 
                   if (job.timeMarks.contains(timeCounter)) {
                     logging.info("Taking snapshot...")
                     isPaused = true
-                    collectCount = users.length
+                    collectCount = users.length + computers.length
 
                     for ((user, i) <- users.zipWithIndex) {
                       ask(user, collect()).mapTo[ConcurrentHashMap[String, AtomicLong]].onComplete {
@@ -236,15 +236,37 @@ object ChordSimulatorService extends Directives with JsonSupport {
                         case _ => logging.error("Invalid collect status")
                       }
                     }
+
+                    for ((computer, i) <- users.zipWithIndex) {
+                      ask(computer, collect()).mapTo[ConcurrentHashMap[String, AtomicLong]].onComplete {
+                        case Success(computerStats) =>
+                          logging.info("Collect from computer " + i)
+
+                          // add stats
+                          for ((k, v) <- computerStats.asScala.toMap) {
+                            computerStats.putIfAbsent(k, new AtomicLong(0L))
+                            computerStats.get(k).addAndGet(v.get)
+                          }
+
+                          collectCount -= 1
+
+                        case Failure(e) =>
+                          hasError = true
+                          logging.error("Unable to collect from computer - " + e.getMessage)
+                          collectCount -= 1
+
+                        case _ => logging.error("Invalid collect status")
+                      }
+                    }
                   }
 
                   var waitTimeout = 0
                   do {
                     Thread.sleep(timeInterval * 1000)
                     waitTimeout += timeInterval
-                  } while (collectCount > 0 && waitTimeout <= 3)
+                  } while (collectCount > 0 && waitTimeout <= 10)
 
-                  if (waitTimeout > 3) {
+                  if (waitTimeout > 10) {
                     // timeout with collect... so stop simulation
                     logging.error("Simulation stopped due to collect timeout")
                     chordSystem.terminate()
@@ -265,7 +287,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
                 if (hasError) {
                   complete(JSONResponse.Success(Map("Status" -> "Error")))
                 } else {
-                  complete(JSONResponse.Success(Map("Status" -> "OK", "stats" -> statsToJson(stats), "hopCounts" -> hopToJson(hopCounts))))
+                  complete("{ \"OK\":true, \"Status\":\"OK\", \"nodeStats\":"+statsToJson(stats)+", \"computerStats\":"+statsToJson(computerStats)+"}")
                 }
               }
           }
@@ -276,10 +298,6 @@ object ChordSimulatorService extends Directives with JsonSupport {
   }
 
   def statsToJson(i : ConcurrentHashMap[String, AtomicLong]) : String = {
-    i.asScala.map( f => (f._1, f._2.get)).toMap.toJson.toString
-  }
-
-  def hopToJson(i : ConcurrentHashMap[Int, AtomicInteger]) : String = {
     i.asScala.map( f => (f._1, f._2.get)).toMap.toJson.toString
   }
 
@@ -306,7 +324,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
 
   private def buildComputerActor(computerNodeID: Int, job: Job, actor: ActorSystem, firstNodeHash: Int): Unit = {
     val hashName = Utilities.mkHash(computerNodeID.toString, Utilities.getChordSize(job.fingerSize)).toString
-    val props = Props(classOf[ChordNode], computerNodeID)
+    val props = Props(classOf[ChordNode], computerNodeID, job.fingerSize)
     val computerActor = actor.actorOf(props, hashName)
     computers += computerActor
     computerActor ! joinNode(firstNodeHash)
