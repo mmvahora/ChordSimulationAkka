@@ -3,11 +3,9 @@ import java.util.concurrent.atomic.AtomicLong
 
 import ChordSimulatorService.system
 import akka.actor.{Actor, ActorRef}
-import akka.util.Timeout
 import org.slf4j.LoggerFactory
 
 import scala.concurrent.ExecutionContextExecutor
-import scala.concurrent.duration._
 
 sealed trait UserCommands
 final case class read(key : String, node : ActorRef) extends UserCommands
@@ -21,13 +19,13 @@ class actorUser(name : String, fingerSize : Int) extends Actor {
   implicit val executionContext: ExecutionContextExecutor = system.dispatcher
 
   def doWrite(data : String, node : ActorRef) : Unit = {
-    implicit val timeout: Timeout = Timeout(1 second)
     val dataHash = Utilities.mkHash(data, chordSize)
     node ! addKeyToNode(dataHash)
   }
 
-  def doRead(key : String, node : ActorRef) : Unit = {  // @todo
-    addToStatsCounter("WRITE-SUCCESS")
+  def doRead(data : String, node : ActorRef) : Unit = {  // @todo
+    val dataHash = Utilities.mkHash(data, chordSize)
+    node ! addKeyToNode(dataHash)
   }
 
   def doCollect() : ConcurrentHashMap[String, AtomicLong] = {
