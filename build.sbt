@@ -1,5 +1,7 @@
 name := "ChordSimulation"
 version := "1.0"
+organization := "jesseuic"
+name := "chordsim"
 
 scalaVersion := "2.11.12"
 
@@ -14,7 +16,6 @@ lazy val root = (project in file("."))
     libraryDependencies +="com.typesafe" % "config" % "1.3.2",
     libraryDependencies +="org.scalatest" %% "scalatest" % "3.0.5" % "test",
     libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.26",
-//    libraryDependencies += "com.typesafe.akka" %% "akka-actor-typed" % "2.5.21",
     libraryDependencies += "com.typesafe.akka" %% "akka-http"   % "10.1.10",
     libraryDependencies += "com.typesafe.akka" %% "akka-stream" % "2.5.26",
     libraryDependencies += "com.typesafe.akka" %% "akka-http-spray-json" % "10.1.10",
@@ -41,3 +42,15 @@ dockerfile in docker := {
     entryPoint("java", "-jar", artifactTargetPath)
   }
 }
+
+imageNames in docker := Seq(
+  // Sets the latest tag
+  ImageName(s"${organization.value}/${name.value}:latest"),
+
+  // Sets a name with a tag that contains the project version
+  ImageName(
+    namespace = Some(organization.value),
+    repository = name.value,
+    tag = Some("v" + version.value)
+  )
+)
