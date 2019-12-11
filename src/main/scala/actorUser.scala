@@ -25,17 +25,18 @@ class actorUser(name : String, fingerSize : Int) extends Actor {
 
   def doRead(data : String, node : ActorRef) : Unit = {  // @todo
     val dataHash = Utilities.mkHash(data, chordSize)
-    node ! addKeyToNode(dataHash)
+    node ! getKeyFromNode(dataHash)
   }
 
-  def doCollect() : ConcurrentHashMap[String, AtomicLong] = {
-    stats
+  def doCollect() : Unit = {
+    sender ! stats
+    stats.clear()
   }
 
   def receive: PartialFunction[Any, Unit] = {
     case read(key, node) => sender() ! doRead(key, node)
     case write(key, node) => sender() ! doWrite(key, node)
-    case collect() => sender() ! doCollect()
+    case collect() => doCollect()
     case _ => logging.info("Received unknown message")
   }
 
