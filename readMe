@@ -1,3 +1,4 @@
+
 # Course Project: Chord Protocol Simulator using Akka/HTTP
 
 **Jesse Coultas (Group Leader)**
@@ -10,40 +11,40 @@
 
 **Shreya Shrivastava**
 
-#Prerequisites:
+# Prerequisites:
 **<DOCKER IMAGE>**
 
 **Java JDK 1.8 + SBT (SimpleBuildTools) Required**
 
 
 
-#How to Run:
+# How to Run:
 
 To run, build JSON Body with the following params and run using HTTP POST port 8080 to path /submitJob:
 
-numUsers  Int -> Ex: 10
+* numUsers  Int -> Ex: 10
 
-numComputers Int -> Ex: 15
+* numComputers Int -> Ex: 15
 
-fingerSize Int -> Ex: 20
+* fingerSize Int -> Ex: 20
 
-perActorMinReq Int -> Ex: 1
+* perActorMinReq Int -> Ex: 1
 
-perActorMaxReq Int -> Ex: 10
+* perActorMaxReq Int -> Ex: 10
 
-simulationDuration(seconds) Int -> Ex: 20
+* simulationDuration(seconds) Int -> Ex: 20
 
-timeMarks(seconds) Array of Ints -> Ex: [10, 15, 20]
+* timeMarks(seconds) Array of Ints -> Ex: [10, 15, 20]
 
-fileID String -> Ex: Filename manually added to upload directory (As specified in config file) or the ID provide back if upload performed using the submitFile service
+* fileID String -> Ex: Filename manually added to upload directory (As specified in config file) or the ID provide back if upload performed using the submitFile service
 
-readWriteRatio Float -> Ex:1.0
+* readWriteRatio Float -> Ex:1.0
 
 Upload Filename
 POST file using standard HTTP Multiform Post to port 8080 with path /submitFile with field name of submitFile.
 
 
-#Design and Implementation: 
+# Design and Implementation: 
 
 Project Structure was built upon using the published paper ["Chord: A Scalable Peer-to-peer Lookup Protocol
 for Internet Applications"](https://pdos.csail.mit.edu/papers/ton:chord/paper-ton.pdf) 
