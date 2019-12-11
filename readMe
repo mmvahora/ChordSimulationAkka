@@ -1,4 +1,4 @@
-# Course Project: Chord Protocol Simulator using Akka/HTTP
+#Course Project: Chord Protocol Simulator using Akka/HTTP
 
 **Jesse Coultas (Group Leader)**
 
@@ -20,14 +20,23 @@
 #How to Run:
 
 To run, build JSON Body with the following params and run using HTTP POST port 8080 to path /submitJob:
+
 numUsers  Int -> Ex: 10
+
 numComputers Int -> Ex: 15
+
 fingerSize Int -> Ex: 20
+
 perActorMinReq Int -> Ex: 1
+
 perActorMaxReq Int -> Ex: 10
+
 simulationDuration(seconds) Int -> Ex: 20
+
 timeMarks(seconds) Array of Ints -> Ex: [10, 15, 20]
+
 fileID String -> Ex: Filename manually added to upload directory (As specified in config file) or the ID provide back if upload performed using the submitFile service
+
 readWriteRatio Float -> Ex:1.0
 
 Upload Filename
