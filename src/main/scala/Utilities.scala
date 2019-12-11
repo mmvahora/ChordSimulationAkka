@@ -1,13 +1,10 @@
 
+import java.lang.Long
+import java.security.MessageDigest
+
 import akka.actor.ActorSelection
 import com.typesafe.config.ConfigFactory
 import org.slf4j.{Logger, LoggerFactory}
-import java.security.MessageDigest
-import java.lang.Long
-
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
-import com.typesafe.config.ConfigFactory
 
 import scala.collection.concurrent.TrieMap
 
@@ -185,8 +182,8 @@ object Utilities {
   def printFingerTable(Node : ChordNode) : Unit = {
     println("** Finger Table of " + Node.nodeID + " ***")
     println("Predecessor: " + Node.predecessor + " Successor: " + Node.successor + " Hop Count " +Node.hopCount)
-    Node.associatedKeyData foreach(x => println(x._1 + " --> " + x._2))
-    Node.associatedKeyData foreach(x => println(x._1 + " --> " + x._2.size))
+//    Node.associatedKeyData foreach(x => println(x._1 + " --> " + x._2))
+//    Node.associatedKeyData foreach(x => println(x._1 + " --> " + x._2.size))
     for(x <- 0 until Node.fingerTable.size){
       println("Finger " + x + " --> " + Node.fingerTable.get(x).get)
     }
@@ -194,16 +191,12 @@ object Utilities {
   }
 
   def getNodeForKey(Movie_Name : String, NodeData :  TrieMap[Int, Int], MovieData : TrieMap[Int, String]) : Int = {
-  //val key = Simulator.keyToMovies.find(_._2.contains(Movie_Name)).map(_._1).get
-    //val key = Simulator.keyToMovies.find(_._2.contains(Movie_Name)).getOrElse(-1,"")._1
     val key = MovieData.find(_._2.contains(Movie_Name)).getOrElse(-1,"")._1
-    if(key == -1)
-     -1
-    else{
-      //val res = Simulator.keyToNode(key)
-      val res = NodeData(key)
-      res
-    }
+
+    if (key == -1)
+      -1
+    else
+      NodeData(key)
   }
 
 
