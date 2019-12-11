@@ -1,9 +1,13 @@
 import com.typesafe.config.ConfigFactory
 import org.scalatest.FunSuite
 
+import scala.collection.concurrent.TrieMap
+
 class unitTest extends FunSuite {
 
   val conf = ConfigFactory.load("chordConfig")
+  var nodeData : TrieMap[Int,Int] = TrieMap(1 -> 10, 2 -> 20)
+  var movieData : TrieMap[Int,String]= TrieMap(1 -> "Titanic", 2 -> "The Dark Knight")
 
   test("checkConfig"){
     val test = conf.getString("FILE_NAME")
@@ -54,4 +58,12 @@ class unitTest extends FunSuite {
     assert(greater._2)
     assert(!greater._3)
   }
+
+  test("checkAssociatedNodeforTheData"){
+    val res = Utilities.getNodeForKey("Titanic", nodeData, movieData)
+    assert(res == 10)
+
+  }
+
+
 }

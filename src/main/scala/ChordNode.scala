@@ -1,10 +1,5 @@
-import java.util.concurrent.ConcurrentHashMap
-import java.util.concurrent.atomic.AtomicInteger
-
 import akka.actor.Actor
 import org.slf4j.LoggerFactory
-
-import scala.collection.mutable
 
 sealed trait Algorithms
 case class joinNode(nodeID: Int) extends Algorithms
@@ -16,25 +11,20 @@ case class get_successor() extends Algorithms
 case class set_successor(name: Int, newNode: Boolean) extends Algorithms
 case class search_successor(key: Int, current: Int, i: Int) extends Algorithms
 case class printTable() extends Algorithms
-case class nodeCollect() extends Algorithms
 case class insertKey(numRequests: Int) extends Algorithms
 case class addKeyToNode(keyHash: Int) extends Algorithms
 
 class ChordNode(val nodeID: Int) extends Actor {
-  final val NOT_FOUND = -1
-  final val ERROR = -2
 
   val logger = LoggerFactory.getLogger(this.getClass)
   var fingerTable = collection.mutable.Map[Int, Int]()
   var successor: Int = -1
   var predecessor: Int = -1
   var nodeInRing: Boolean = false
-  var keys = new mutable.HashSet[Int]()
-
-  private val hopCounts = new ConcurrentHashMap[Int, AtomicInteger]()
+  var hopCount = 0
+  var associatedKeyData = collection.mutable.Map[Int, String]()
 
   def receive = {
-    // Collect Hop Counts from Nodes
     /**
      * When the first node joins the network, its successor and predecessor is set to itself.
      * The entries of the finger table will be initially pointed to itself.
@@ -209,13 +199,15 @@ class ChordNode(val nodeID: Int) extends Actor {
         val Key = Utilities.mkHash(Simulator.pathPrefix + nodeID + i, Simulator.chordSize)
         Simulator.keyToMovies(Key) = Simulator.movies_list(Simulator.movies_count)
         Simulator.movies_count = Simulator.movies_count + 1
+        associatedKeyData(Key)= Simulator.movies_list(Simulator.movies_count)
         Thread.sleep(10)
         self ! addKeyToNode(Key)
       }
     }
 
     case addKeyToNode(keyHash: Int) => {
-      Simulator.TotalHops = Simulator.TotalHops + 1;
+      hopCount = hopCount + 1
+      Simulator.TotalHops = Simulator.TotalHops + 1
       var successorCheck = 0
       var predecessorCheck = 0
 
@@ -241,8 +233,6 @@ class ChordNode(val nodeID: Int) extends Actor {
     }
 
   }
-
-
 
   def checkSuccessor(key: Int): Boolean = {
 
