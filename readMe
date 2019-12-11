@@ -12,7 +12,7 @@
 **Shreya Shrivastava**
 
 # Prerequisites:
-**<DOCKER IMAGE>**
+**Docker image jesseuic/chordsim:latest**
 
 **Java JDK 1.8 + SBT (SimpleBuildTools) Required**
 
