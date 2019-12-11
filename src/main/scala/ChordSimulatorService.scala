@@ -184,7 +184,8 @@ object ChordSimulatorService extends Directives with JsonSupport {
                   executionPlan(user.toString) = userExecutionPlan
                 }
 
-                logging.debug(executionPlan.mkString)
+                logging.debug("Execution Plan: " + executionPlan.mkString)
+                Thread.sleep(3000) // wait 3 seconds to start up all actors @todo is this helping anything?
 
                 // event loop
                 while (timeCounter <= job.simulationDuration) {
@@ -196,8 +197,8 @@ object ChordSimulatorService extends Directives with JsonSupport {
                     // "ask" each user to read or write
                     for (task <- userPlan) {
                       task match {
-                        case READ => user ! read(getFromFile(dataRAF))
-                        case WRITE => user ! write(getFromFile(dataRAF))
+                        case READ => user ! read(getFromFile(dataRAF), computers.head)
+                        case WRITE => user ! write(getFromFile(dataRAF), computers.head)
                       }
                     }
                   }
@@ -207,7 +208,7 @@ object ChordSimulatorService extends Directives with JsonSupport {
 
                   // collect results (if indicated by timeMarks)
                   var collectCount = 0
-                  var computerCollectCount = 0
+//                  var computerCollectCount = 0
 
                   if (job.timeMarks.contains(timeCounter)) {
                     logging.info("Taking snapshot...")
@@ -235,38 +236,15 @@ object ChordSimulatorService extends Directives with JsonSupport {
                         case _ => logging.error("Invalid collect status")
                       }
                     }
-
-                    var computerCollectCount = computers.length
-                    for ((computer, i) <- computers.zipWithIndex) {
-                      ask(computer, nodeCollect()).mapTo[ConcurrentHashMap[Int, AtomicInteger]].onComplete {
-                        case Success(computerStats) =>
-                          logging.info("Collect from computer " + i)
-
-                          // add stats
-                          for ((k, v) <- computerStats.asScala.toMap) {
-                            hopCounts.putIfAbsent(k, new AtomicInteger(0))
-                            hopCounts.get(k).addAndGet(v.get)
-                          }
-
-                          computerCollectCount -= 1
-
-                        case Failure(e) =>
-                          hasError = true
-                          logging.error("Unable to collect from computer - " + e.getMessage)
-                          computerCollectCount -= 1
-
-                        case _ => logging.error("Invalid collect status")
-                      }
-                    }
                   }
 
                   var waitTimeout = 0
                   do {
                     Thread.sleep(timeInterval * 1000)
                     waitTimeout += timeInterval
-                  } while (collectCount > 0 && waitTimeout <= 2)
+                  } while (collectCount > 0 && waitTimeout <= 3)
 
-                  if (waitTimeout > 2) {
+                  if (waitTimeout > 3) {
                     // timeout with collect... so stop simulation
                     logging.error("Simulation stopped due to collect timeout")
                     chordSystem.terminate()
@@ -279,8 +257,8 @@ object ChordSimulatorService extends Directives with JsonSupport {
                 users.foreach( _ ! PoisonPill )
                 computers.foreach( _ ! PoisonPill )
 
+                chordSystem.terminate()
                 Await.ready(chordSystem.whenTerminated, Duration(job.simulationDuration + 10, TimeUnit.SECONDS))
-                //chordSystem.terminate()
 
                 dataRAF.close()
 

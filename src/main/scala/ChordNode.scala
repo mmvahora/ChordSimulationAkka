@@ -7,8 +7,6 @@ import org.slf4j.LoggerFactory
 import scala.collection.mutable
 
 sealed trait Algorithms
-case class addData(dataHash : Int) extends Algorithms
-case class findKey(dataHash : Int) extends Algorithms
 case class joinNode(nodeID: Int) extends Algorithms
 case class fixFinger(node: Int, i: Int) extends Algorithms
 case class updateFingers() extends Algorithms
@@ -35,22 +33,8 @@ class ChordNode(val nodeID: Int) extends Actor {
 
   private val hopCounts = new ConcurrentHashMap[Int, AtomicInteger]()
 
-
   def receive = {
     // Collect Hop Counts from Nodes
-    case nodeCollect() => {
-      sender ! hopCounts
-    }
-
-    case findKey(dataHash : Int) => {  // @todo replace real version
-      hopCounts.get(1).incrementAndGet()
-      1
-    }
-
-    case addData(dataHash : Int) => {
-      keys.add(dataHash)
-    }
-
     /**
      * When the first node joins the network, its successor and predecessor is set to itself.
      * The entries of the finger table will be initially pointed to itself.
