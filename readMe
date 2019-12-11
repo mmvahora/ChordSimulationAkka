@@ -20,7 +20,9 @@
 
 # How to Run:
 
-To run, build JSON Body with the following params and run using HTTP POST port 8080 to path /submitJob:
+Docker image is available at jesseuic/chordsim:latest.  The docker image uses port 8080 which can be mapped to a different port when launching the docker image.
+
+To run a job, build JSON Body with the following params and run using HTTP POST port 8080 to path /submitJob:
 
 * numUsers  Int -> Ex: 10
 
