@@ -204,15 +204,15 @@ class ChordNode(val nodeID: Int) extends Actor {
       Utilities.printFingerTable(this)
     }
 
-    case insertKey(numRequests: Int) => {
-      for (i <- 1 to numRequests) {
-        val Key = Utilities.mkHash(Simulator.pathPrefix + nodeID + i, Simulator.chordSize)
-        Simulator.keyToMovies(Key) = Simulator.movies_list(Simulator.movies_count)
-        Simulator.movies_count = Simulator.movies_count + 1
-        Thread.sleep(10)
-        self ! addKeyToNode(Key)
-      }
-    }
+//    case insertKey(numRequests: Int) => {
+//      for (i <- 1 to numRequests) {
+//        val Key = Utilities.mkHash(Simulator.pathPrefix + nodeID + i, Simulator.chordSize)
+//        Simulator.keyToMovies(Key) = Simulator.movies_list(Simulator.movies_count)
+//        Simulator.movies_count = Simulator.movies_count + 1
+//        Thread.sleep(10)
+//        self ! addKeyToNode(Key)
+//      }
+//    }
 
     case addKeyToNode(keyHash: Int) => {
       Simulator.TotalHops = Simulator.TotalHops + 1;
@@ -239,7 +239,6 @@ class ChordNode(val nodeID: Int) extends Actor {
         }
       }
     }
-
   }
 
 
