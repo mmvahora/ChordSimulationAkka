@@ -22,14 +22,14 @@ class unitTest extends FunSuite {
   test("CheckCSVLoads")
   {
     val fileStream = getClass.getResourceAsStream("/movies.csv")
-    val lines = Source.fromInputStream(fileStream).getLines
+    val lines = scala.io.Source.fromInputStream(fileStream).getLines
     assert(lines.next()!=null)
   }
 
   test("CheckCSVLines")
   {
     val fileStream = getClass.getResourceAsStream("/movies.csv")
-    val lines = Source.fromInputStream(fileStream).getLines
+    val lines = scala.io.Source.fromInputStream(fileStream).getLines
     var count=0
     lines.foreach(line=>count=count+1)
     assert(count==15454)
