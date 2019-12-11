@@ -28,7 +28,7 @@ object Simulator {
   var flag: AtomicBoolean = new AtomicBoolean(true)
 
   //loading movies data set
-  var keyToNode = new TrieMap[Int, Int]()
+
   var count = 0
   var inspec: AtomicBoolean = new AtomicBoolean(true)
   var TotalHops = 0;
@@ -36,10 +36,10 @@ object Simulator {
   val loader = Thread.currentThread.getContextClassLoader
   val is = loader.getResourceAsStream("movies.csv")
   val initialStocks = scala.io.Source.fromInputStream(is).mkString
-  val movies_list = initialStocks.split("\n").drop(0).toList
+  val movies_list = initialStocks.split("\n").map(_.trim).drop(0).toList
 
- // var keyToMovies: concurrent.Map[Int, String] = new ConcurrentHashMap().asScala
- var keyToMovies = new TrieMap[Int, String]()
+  var keyToNode = new TrieMap[Int, Int]()
+  var keyToMovies = new TrieMap[Int, String]()
 
   //number of nodes to be placed in the chord ring
   val numberOfNodes = 5
@@ -81,15 +81,6 @@ object Simulator {
         }
       }
     }
-    //prints the finger table of each node joined in the ring
-    for (i <- 1 to numberOfNodes) {
-      Thread.sleep(10)
-      val nodeName = Utilities.mkHash(i.toString, Simulator.chordSize)
-      val node = system.actorSelection(pathPrefix + nodeName)
-      node ! printTable()
-      Thread.sleep(10)
-    }
-    Thread.sleep(100)
 
     //insertion of keys to node
     for (i <- 1 to numberOfNodes) {
@@ -97,6 +88,17 @@ object Simulator {
       var nodeName = Utilities.mkHash(i.toString, Simulator.chordSize)
       var node = system.actorSelection(pathPrefix + nodeName)
       node ! new insertKey(numberOfRequests);
+    }
+
+    Thread.sleep(100)
+
+    //prints the finger table of each node joined in the ring
+    for (i <- 1 to numberOfNodes) {
+      Thread.sleep(10)
+      val nodeName = Utilities.mkHash(i.toString, Simulator.chordSize)
+      val node = system.actorSelection(pathPrefix + nodeName)
+      node ! printTable()
+      Thread.sleep(10)
     }
 
     // time delay
@@ -109,6 +111,10 @@ object Simulator {
     println("Number of hops: " + TotalHops)
     println("Avg. number of hops:" + TotalHops.toDouble / (numberOfNodes * numberOfRequests))
     println("Terminated")
+
+   val associatedNode = Utilities.getNodeForKey("Titanic",keyToNode,keyToMovies)
+    println("associatedNode for the movie" +associatedNode)
+
     System.exit(0)
     sys.exit()
   }
